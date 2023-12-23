@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="icon" href="faviconlogo2.png" type="png"></link>
+</head>
+
+<body>
+    <div>
+
+  <h1>ComFanaics Signup</h1>
+  <a href="homepage.html">Homepage</a>
+
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+
+    <label>Gender:</label>
+    <div>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label>
+    </div>
+    <div>
+      <input type="radio" id="female" name="gender" value="female" required>
+      <label for="female">Female</label>
+    </div>
+
+    <label for="comic-genre">Favorite Comic Genre:</label>
+    <select id="comic-genre" name="comic-genre">
+      <option value="action">Action</option>
+      <option value="adventure">Adventure</option>
+      <option value="comedy">Comedy</option>
+      <option value="drama">Drama</option>
+    </select>
+
+   <!-- <label for="terms">
+      <input type="checkbox" id="terms" name="terms" required>
+      I agree to the terms and conditions
+    </label>
+terms could be added here or on a new webpage-->
+
+    <button type="submit">Sign Up</button>
+  </form>
+  </div>
+
+</body>
+</html>
