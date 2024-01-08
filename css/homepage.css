@@ -1,5 +1,75 @@
+/*body{ background-color: grey;}*/
+header
+{
+  background-color: lightgrey;
+}
+.header-socialmedia{
+  display: flex;
+  background-color: darkgray;
+  color: white;
+  justify-content: right;
+  
+}
+.header-socialmedia a{
+  color: white;
+}
+
+.sub-header{
+  display: flex;
+  align-items: center;
+  
+}
 .header-logo img 
 {
   height: 10%;
   width: 10%;
+  
+}
+
+#rec-list{
+  display: flex;
+  overflow-x: auto;
+  background-color: darkgray;
+  gap: 10px;
+}
+
+.rec-comic-card{
+  background: lightgray;
+}
+
+#latest-list{
+  display: flex;
+  align-items: center;
+  background-color: darkgray;
+  overflow-x: auto;
+  gap:10px;
+}
+
+.comic-card{
+  display:flex;
+  background-color: lightgray;
+}
+
+footer{
+  background-color: lightgray;
+}
+
+
+.footer-logo img {
+  width: 10%;
+  height: 10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+
+.other-webpages{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+.other-webpages div:nth-child(2) {
+  margin-left: 60px; /* Adjust the margin as needed */
 }
