@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Comfanatics-index</title>
 <link rel="icon" href="logo/faviconlogo2.png" type="png"></link>
+<link rel="stylesheet" type="text/css" href="css/homepage.css"></link>
 
 </head>
 
@@ -16,27 +17,35 @@
 
         <div class="header-socialmedia" >
             <strong>Follow us:</Strong>
-            <a href="https://www.instagram.com/comfanatics123/" target="blank">instagram</a>
-            <a href="https://twitter.com/comfanatics123" target="blank">twitter</a>
+            <a href="https://www.instagram.com/comfanatics123/" target="blank">Instagram</a>
+            <a href="https://twitter.com/comfanatics123" target="blank">Twitter</a>
         </div> 
-
+        <div class="sub-header">
         <div class="header-logo">
             <a href=" ">
-            <img src="logo/Logo.png" alt="Logo" height=10% width= 10%>
+            <img src="logo/Logo.png" alt="Logo" >
         </div>
     
         <div class="header-index">
 
-            Types
-                <ul>
-                <li> <a href="types/comic/comic.html" title="Comic" >Comic</a></li>
-                <li> <a href="types/manga/manga.html" title="Manga">Manga</a></li>
-                <li> <a href="types/manhwa/manhwa.html" title="Manhwa">Manhwa</a></li>
-                </ul>
-                </div> 
+           <!-- Inside the <div class="sub-header"> -->
+<div class="header-index">
+    <div class="dropdown-container">
+        <button class="dropdown-btn">Types</button>
+        <div class="dropdown-content">
+            <ul>
+                <li><a href="types/comic/comic.html" title="Comic">Comic</a></li>
+                <li><a href="types/manga/manga.html" title="Manga">Manga</a></li>
+                <li><a href="types/manhwa/manhwa.html" title="Manhwa">Manhwa</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        </div>
     </header> 
 
-
+<main>
 <div class="cat-heading">
     <h2>Recommended</h2>
 </div>
@@ -44,8 +53,19 @@
 <div id="rec-list"> <!--scroll feauters can be added here -->
 
     <div class="rec-comic-card">
+       
+        
         <div class="rec-poster">
-            <a href="info/jujustu-kaisen.html"><img src="info/img/jujutsu-kaisen.jpg" alt="jujutsukaisen-poster" > </img></a>
+            <div class="hover-card">
+                <div class="hover-card-title">Jujustu Kaisen</div>
+                <div class="info-button">
+                    <a href="info/jujustu-kaisen.html"><button>Info</button></a>
+                </div>
+                <div class="read-button">
+                    <a href="./panels/jujutsu-kaisen/ch1/pannel.html"><button>Read</button></a></div>
+    
+            </div>
+            <img src="info/img/jujutsu-kaisen.jpg" alt="jujutsukaisen-poster">
         </div>
         <div class="comic_desc"><strong><a href="info/jujustu-kaisen.html">Jujutsu Kaisen</a></strong></div>
         <!--link to front page but can also give the option to panel page-->
@@ -54,17 +74,34 @@
     
     
     <div class="rec-comic-card">
+        
         <div class="rec-poster">
-                <a href="info/naruto.html"><img src="info/img/naruto.jpg" alt="naruto poster" > </img></a>
+            <div class="hover-card">
+                <div class="hover-card-title">Naruto</div>
+                <div class="info-button">
+                    <a href="info/jujustu-kaisen.html"><button>Info</button></a>
+                </div>
+                <div class="read-button"><a href="./panels/naruto/ch1/pannel.html"><button>Read</button></a></div>
+            </div>
+                <img src="info/img/naruto.jpg" alt="naruto poster">
         </div>
     <div class="comic_desc"><strong><a href="info/naruto.html">Naruto</a></strong></div>
     </div>    
         
     <div class="rec-comic-card">
+       
             <div class="rec-poster">
-                    <a href="info/one-piece.html"><img src="info/img/one-piece.jpg" alt="one piece poster" > </img></a>
+                <div class="hover-card">
+                    <div class="hover-card-title">One Piece</div>
+                    <div class="info-button">
+                        <a href="info/one-piece.html"><button>Info</button></a>
+                    </div>
+                    <div class="read-button"><a href="./panels/one-piece/ch1/pannel.html"><button>Read</button></a></div>
+        
                 </div>
-                <div class="comic_desc"><strong><a href="info/one-piece.html">One piece</a></strong></div>
+                    <img src="info/img/one-piece.jpg" alt="one piece poster" >
+                </div>
+                <div class="comic_desc"><strong><a href="info/one-piece.html">One Piece</a></strong></div>
     </div>              
             
 
@@ -78,71 +115,82 @@
 <div id="latest-list">
 
     <div class="comic-card" >
-
+        
         <div class="poster" >
             <a href="./info/jujustu-kaisen.html"><img src="info/img/jujutsu-kaisen.jpg" alt="jujutsukaisen poster" ></img></a>
         </div>
-          
-        <div class="comic_name"><big><strong><a href="../../info/jujustu-kaisen.html"><strong>Jujustu Kaisen</strong></big></a></strong></div>
+         
+        <div class="comic-detail">
+        <div class="comic-name"><big><strong><a href="../../info/jujustu-kaisen.html"><strong>Jujustu Kaisen</strong></big></a></strong></div>
+
 
         <div class="chap-list">
-            <div ><a href="panels/jujutsu-kaisen/ch5/panel.html" >Chapter 5</a></div>
-            <div ><a href="panels/jujutsu-kaisen/ch5/panel.html" >Chapter 4</a></div>
-            <div ><a href="panels/jujutsu-kaisen/ch5/panel.html" >Chapter 3</a></div>
+            <div class="chapters" ><a href="panels/jujutsu-kaisen/ch5/class="chapters"pannel.html" >Chapter 5</a></div>
+            <div class="chapters" ><a href="panels/jujutsu-kaisen/ch5class="chapters"/panel.html" >Chapter 4</a></div>
+            <div class="chapters" ><a href="panels/jujutsu-kaisen/ch5class="chapters"/panel.html" >Chapter 3</a></div>
+
         </div>
-    
+        </div>
     </div>
 
     <div class="comic-card" >
         <div class="poster" >
-            <a href=" "><img src="" > </img></a>
+            <a href="info/one-piece.html"><img src="info/img/one-piece.jpg"></a>
         </div>
+        <div class="comic-detail">
 
-        <div class="comic-name"><big><strong><a href=" " > </a></strong></big></div>
+        <div class="comic-name"><big><strong><a href=" " >One Piece</a></strong></big></div>
 
         <div class="chap-list">
-            <div ><a href=" " >chapter</a></div>
-            <div ><a href=" " >chapter</a></div>
-            <div ><a href=" " >chapter</a></div>
+            <div class="chapters"><a href="./panels/one-piece/ch3/pannel.html" >Chapter 3</a></div>
+            <div class="chapters"><a href="./panels/one-piece/ch2/pannel.html" >Chapter 2</a></div>
+            <div class="chapters"><a href="./panels/one-piece/ch1/pannel.html" >Chapter 1</a></div>
         </div>
-    
+        </div>
     </div>
 
     <div class="comic-card" >
         <div class="poster" >
-            <a href=" "><img src="" > </img></a>
+            <a href="info/akira.html"><img src="info/img/akira.jpg"></a>
         </div>
+        <div class="comic-detail">
 
-        <div class="comic-name"><big><strong><a href=" " > </a></strong></big></div>
+        <div class="comic-name"><big><strong><a href="./info/akira.html" >Akira</a></strong></big></div>
 
         <div class="chap-list">
-            <div ><a href=" " >chapter</a></div>
-            <div ><a href=" " >chapter</a></div>
-            <div ><a href=" " >chapter</a></div>
+            <div class="chapters"><a href="./panels/akira/ch3/panel.html">Chapter 3</a></div>
+            <div class="chapters"><a href="./panels/akira/ch2/panel.html">Chapter 2</a></div>
+            <div class="chapters"><a href="./panels/akira/ch1/panel.html">Chapter 1</a></div>
         </div>
-    
+        </div>
     </div>
     
     </div>
 </div>
+</main>
 
     <footer>
     
         <div class="footer-logo">
             <a href=" ">
                <!-- an info page link here too-->
-               <img src="logo/faviconlogo2.png" alt="Logo" height=5% width=5%>
-               </img> 
+               <img src="logo/faviconlogo2.png" alt="Logo">
+               
            </a>
         </div> 
         <!--link to the extra pages here-->
-           <div><a href="other/signuppage.html">Signup</a></div>
+        <div class="other-webpages">   
+        <div><a href="other/signuppage.html">Signup</a></div>
            <div ><a href="other/contacts.html">Contact</a></div>
            <div ><a href="">Terms of services</a></div>
+           </div>
            <!--copyright-->
     
 
     </footer>
+
+
+    
 </body>  
 
 
