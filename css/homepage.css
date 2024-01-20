@@ -101,9 +101,7 @@ header
 .dropdown-container:hover .dropdown-content {
   display: block;}
 
-.cat-heading{
-  
-}
+
 main{
   padding: var(--small-padding) var(--big-padding);
 }
@@ -220,7 +218,6 @@ main{
 .comic-detail{
   display: grid;
   grid-template-rows: repeat(2,1fr);
-  padding: ;
   /* justify-content: center; */
   /* align-items: center; */
   /* align-content:space-around; */
