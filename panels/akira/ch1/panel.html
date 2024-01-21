@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akira</title>
     <link rel="icon" href="../../../logo/faviconlogo2.png" type="png"></link>
+    <link rel="stylesheet" href="../../../css/panel.css" type="text/css">
+    <script src="../../../javascript/panel.js"></script>
 </head>
 <body>
 
@@ -16,45 +18,50 @@
         </div> 
         
         <div class="info-page">
-        <a href="../../../info/akira.html">Akira</a> 
+            <a href="../../../info/akira.html">Akira</a> 
         </div>   
         
-        <div class="top-nav"> 
-            <div class="chapter-nav-list">
-                <form>
-                    <select name="chapters" id="chapters">
-                    <option value="../ch1/panel.html" selected>Chapter 1</option>
-                    <option value="../ch2/panel.html">Chapter 2</option>
-                    <option value="../ch3/panel.html">Chapter 3</option>
-                    </select>
-                </form>
+        <div class="chapter-nav-list">
+            <div class="dropdown-container">
+                <button class="dropdown-btn">Chapters</button>
+                <div class="dropdown-content">
+                    <ul id="chapterList">
+                        <li><a href="../ch1/panel.html" title="Chapter 1">Chapter 1</a></li>
+                        <li><a href="../ch2/panel.html" title="Chapter 2">Chapter 2</a></li>
+                        <li><a href="../ch3/panel.html" title="Chapter 3">Chapter 3</a></li>
+                    </ul>
+                </div>
             </div>
-
+        </div>
+        
+        <div class="top-nav">
             <div class="top-next-button">
                 <a href="../ch2/panel.html"><button >next</button></a>
             </div>
         </div>
+    </div>
+
+    <div class="container">
+        <div class="panel" > 
+            <img src="ch1-1.jpg" alt="0">
+        </div>
+        <div class="panel"> 
+            <img width="1000px" src="ch1-1.jpg" alt="0">
+        </div>
+        <div class="panel"> 
+            <img width="1000px" src="ch1-1.jpg" alt="0">
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="bottom-nav">
+            <div class="bottom-next-button">
+                <a href="../ch2/panel.html"><button>next</button></a>
+            </div>
+        </div>
+    </div>
+
 </div>
 
-<div class="container" align="center">
-    <div class="panel" > 
-        <img width="1000px" src="ch1-1.jpg" alt="0">
-    </div>
-    <div class="panel"> 
-        <img width="1000px" src="ch1-1.jpg" alt="0">
-    </div>
-    <div class="panel"> 
-        <img width="1000px" src="ch1-1.jpg" alt="0">
-    </div>
-</div>
-
-<div class="bottom-nav">
-    <div class="bottom-next-button">
-    <a href="../ch2/panel.html"><button>next</button></a>
-    </div>
-</div>
-
-</div>
 </body>
-
 </html>
