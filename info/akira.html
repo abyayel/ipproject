@@ -8,17 +8,33 @@
     <link rel="stylesheet" href="../css/info.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <script src="../javascript/info.js"></script>
 
 </head>
 <body>
     
     <header>
 
-        <div class="header-socialmedia" >
+        <div id="first-header" >
+            <div id="header-random-read">
+                <button id="random-read-button">Read Random</button>
+            </div>
+            <div id="socila-media">
             <strong>Follow us:</Strong>
             <a href="https://www.instagram.com/comfanatics123/" target="blank">Instagram</a>
             <a href="https://twitter.com/comfanatics123" target="blank">Twitter</a>
+             </div>
+             <div class="dark-mode">
+                <div id="dar-kmode-icon-container">
+                <i id="darkModeIcon" class="far fa-moon"></i>
+                </div>
+                <div id="dark-mode-text-container">
+                <span id="darkModeText">Dark Mode</span>
+                </div>
+            </div>
+
         </div> 
+
         <div class="sub-header">
         <div class="header-logo">
             <a href="../homepage.html">
@@ -41,6 +57,7 @@
     </div>
 </div>
 
+<div id="comic-search-bar"><input id="comic-search" type="search" placeholder="&#128269 Search comic" ></div>
 
         </div>
     </header> 
@@ -55,7 +72,7 @@
             <div class="comic-detail">
                 <h2 class="comic-name">Akira</h2>
                 <div class="read-save-button">
-                <div class="read-container"><a href="../panels/akira/ch1/pannel.html"><button>Read Now</button></a></div>
+                <div class="read-container"><a href="../panels/akira/ch1/panel.html"><button>Read Now</button></a></div>
                 <div class="bookmark-container">
                     <a href=""><button><i class="far fa-bookmark"></i>
             </div></button></a></div>
@@ -69,8 +86,8 @@
                 </div>   
                 
             </div>
-            <div class="comic-vid-detail">
-            <div class="comic-extra-details">
+            <div id="comic-vid-detail">
+            <div id="comic-extra-details">
                 <div><span>Type:</span><a href="../types/manga/manga.html">Manga</a></div>
                 <div><span>Status:</span><span>Publishing</span></div>
                 <div><span>Authors:</span><span>Otomo, Katushiro (Story &amp; Art)</span></div>
@@ -79,9 +96,10 @@
                 <div id="trailer">
                     <video src="trailer/akira.mp4" width="500" controls autoplay loop muted ></video>
                     </div>
-            </div> 
-            
-            
+            </div>
+            <div id="details-toggle-container"> 
+            <span id="details-toggle">Hide Details</span>
+            </div>
         </div>
     </div>
         
@@ -90,7 +108,7 @@
         <div class="chapter-content">
             <div id="chapter-list-header">
                 <div id="chapter">CHAPTERS</div>
-                <div id="chapter-search-bar"><input type="search" placeholder="&#128269 Number of Chapter" ></div>
+                <div id="chapter-search-bar"><input id="chapter-search" type="search" placeholder="&#128269 Number of Chapter" ></div>
             </div>
             <div class="chapter-list">
                 

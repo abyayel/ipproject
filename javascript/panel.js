@@ -4,7 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
     var dropdownContent = document.getElementById("dropdown-content");
     var searchList = document.getElementById("list-search");
     var currentChapter = extractChapterNumberFromTitle(); // Function to extract chapter number from title
-    var totoalChapters= document.querySelectorAll("#chapterList li").length;
+    var totalChapters= document.querySelectorAll("#chapterList li").length;
+    var chaptersdiv = document.querySelectorAll(".chapter-container");
+
+    chaptersdiv[currentChapter-1].style.backgroundColor = "blue";
+    chaptersdiv[currentChapter-1].style.borderLeftColor = "purple";
 
     function extractChapterNumberFromTitle() {
         // Extract chapter number from the HTML title (assuming it's formatted like "Chapter X")
@@ -46,11 +50,96 @@ document.addEventListener("DOMContentLoaded", function () {
      for(var i= 0; i<previousButton.length;i++)
      { previousButton[i].style.display="none"}
     }
-    if(currentChapter === totalChapters)
+    if(currentChapter == totalChapters)
     {
         for(var i=0;i<nextButton.length;i++)
         {
             nextButton[i].style.display="none";
         }
     }
+    var searchInput = document.getElementById("chapterSearch");
+
+    searchInput.addEventListener("input", function () {
+        var searchTerm = searchInput.value.toLowerCase();
+
+        // Hide or show chapters based on the search term
+        var chapters = document.querySelectorAll("#chapterList li");
+
+        chapters.forEach(function (chapter) {
+            var chapterTitle = chapter.textContent.toLowerCase();
+            if (chapterTitle.includes(searchTerm)) {
+                chapter.style.display = "grid";
+            } else {
+                chapter.style.display = "none";
+            }
+        });
+    });
+   
+    
+       
+        
+        var container = document.querySelector(".container"); 
+        var header = document.querySelector(".header");
+        var firstPanel = document.querySelector(".panel");
+        var headerHeight = header.offsetHeight;
+        container.style.paddingTop = headerHeight + "px";
+    
+        var panelThreshold = firstPanel.offsetTop // Adjusted to 20px below the top
+        var lastScrollTop = 0;
+    
+        // Set initial styles
+        header.style.position = "fixed";
+        header.style.top = "0";
+        header.style.width = "100%";
+        
+       
+    
+        window.addEventListener("scroll", function () {
+            var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    
+            // header.style.transition = "transform 0.4s ease"; 
+            if (scrollTop >= panelThreshold) {
+               
+                header.style.transform = "translateY(-100%)";
+                header.style.transition = "transform 0s ease";
+                // header.style.display = "none";
+                
+            
+                if(scrollTop<lastScrollTop)
+                {
+                    // header.style.display= "grid";
+                    header.style.transform="translateY(0%)";
+                    header.style.transition = "transform 1s ease";
+
+                }
+            } 
+            lastScrollTop = scrollTop;
+        });
+    
+    
+    
+
+    container.addEventListener("click",function()
+    {
+        
+            // Scroll slightly from the current position with a smooth animation
+            window.scrollBy({
+                top: 50,  // Adjust the value based on your preference
+                behavior: "smooth"
+            });
+        
+
+    });
+        
+    
+    
+    
+
+
+
+
+    
 });
+
+
+
