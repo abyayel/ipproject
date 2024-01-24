@@ -11,7 +11,7 @@
    
   }
   
-  .header-socialmedia{
+  #first-header{
     display: flex;
     background-color: darkgray;
     color: white;
@@ -128,10 +128,10 @@
         height: 200px;
         
     }
-    .comic-extra-details{
+    #comic-extra-details{
  margin-bottom: 50px;
     }
-    .comic-vid-detail{
+    #comic-vid-detail{
         display: grid;
         
         margin-left: 50px;
@@ -262,5 +262,17 @@
         border-radius: 10px;
         border-style: none;
       }
+
       
-    
+
+      
+ 
+.dark-mode .chapter-content{
+    background-color: #1a1a1a;
+}
+.dark-mode #first-header{
+  background-color: yellow;
+
+}
+
+  

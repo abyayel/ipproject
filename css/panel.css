@@ -5,10 +5,11 @@
 
   body{ position: relative;
   margin: 0px 0px;
-  background-color: black;
+  background-color: white;
   a{text-decoration: none;}}
 
   .header{
+    position: fixed;
     display: grid;
     border: solid;
     padding: var(--big-padding) 50px;
@@ -41,18 +42,31 @@
     display:grid;
     align-items: center;
   }
-  .dropdown-content ul {
+  
+  #dropdown-content ul {
     display:grid;
-    position: absolute;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-gap: 10px; 
+    background-color:yellow;
+    grid-template-columns: repeat(3, auto); 
+    grid-gap: 5px; 
     padding: 10px; 
     list-style: none;
     margin: 0;
 }
 
-.dropdown-content li {
-    text-align: center; 
+#chapterList a:hover{
+    
+    border-left: solid;
+}
+.chapter-container{
+ border-left:solid white;
+ background-color: lightyellow;
+}
+.chapter-container:hover{
+  background-color: red;
+  
+  border-left: solid pink;
+  transition: background-color 0.8s ease;
+  transition: border-left-color 0.8 s ease; 
 }
   .top-nav{
     display:grid;
@@ -99,3 +113,8 @@
   }
 
  
+
+.panel img{
+  width: 200px;
+  height: 600px;
+}
