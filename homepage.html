@@ -8,41 +8,78 @@
 <title>Comfanatics-index</title>
 <link rel="icon" href="logo/faviconlogo2.png" type="png"></link>
 <link rel="stylesheet" type="text/css" href="css/homepage.css"></link>
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+<script src="javascript/home-page.js"></script>
 </head>
 
 <body>
  
     <header>
 
-        <div class="header-socialmedia" >
+         <div id="first-header" >
+            <div id="header-random-read">
+                <button id="random-read-button">Read Random</button>
+            </div>
+            <div id="socila-media">
             <strong>Follow us:</Strong>
             <a href="https://www.instagram.com/comfanatics123/" target="blank">Instagram</a>
             <a href="https://twitter.com/comfanatics123" target="blank">Twitter</a>
-        </div> 
-        <div class="sub-header">
-        <div class="header-logo">
-            <a href=" ">
-            <img src="logo/Logo.png" alt="Logo" >
-        </div>
-    
-        <div class="header-index">
+             </div>
+             <div class="dark-mode">
+                <div id="dar-kmode-icon-container">
+                <i id="darkModeIcon" class="far fa-moon"></i>
+                </div>
+                <div id="dark-mode-text-container">
+                <span id="darkModeText">Dark Mode</span>
+                </div>
+            </div>
 
-           <!-- Inside the <div class="sub-header"> -->
-<div class="header-index">
-    <div class="dropdown-container">
-        <button class="dropdown-btn">Types</button>
-        <div class="dropdown-content">
-            <ul>
-                <li><a href="types/comic/comic.html" title="Comic">Comic</a></li>
-                <li><a href="types/manga/manga.html" title="Manga">Manga</a></li>
-                <li><a href="types/manhwa/manhwa.html" title="Manhwa">Manhwa</a></li>
-            </ul>
+        </div> 
+
+        <div class="sub-header">
+            <div class="header-logo">
+                <a href="../homepage.html">
+                <img src="../../logo/Logo.png" alt="Logo" >
+            </div>
+        
+          
+    
+               
+    <div class="header-index">
+        <div class="dropdown-container">
+            <button class="dropdown-btn">Types</button>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="../types/comic/comic.html" title="Comic">Comic</a></li>
+                    <li><a href="../types/manga/manga.html" title="Manga">Manga</a></li>
+                    <li><a href="../types/manhwa/manhwa.html" title="Manhwa">Manhwa</a></li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
-
+    
+    <div id="comic-search-bar"><input id="comic-search" type="search" placeholder="&#128269 Search comic" ></div>
+    
+            </div>
+    <div id="suggestion-slide">
+        <div id="mask"><div id="blurry-background"></div></div>
+        <div id="suggestion-wrapper">
+            <div id="slide-details">
+              <div id="slide-title"></div>
+              <div id="slide-buttons">
+              <div id="slide-info"><a href=""><button id="slide-info-button">Info</button></a></div>
+              <div id="slide-read"><a href=""><button id="slide-read-button">Read</button></a></div>
+              </div>
+            </div>
+            <div id="slide-poster"><a href="">
+                <img src="" alt="Slide Show poster">
+              </a></div>
         </div>
+    
+    </div>   
+
+
+        
     </header> 
 
 <main>
