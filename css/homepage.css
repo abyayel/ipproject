@@ -8,7 +8,17 @@ a{text-decoration: none;}}
 header
 {
   background-color: lightgrey;
+  padding-bottom: var(--big-padding);
  
+}
+#first-header{
+  display: flex;
+  background-color: darkgray;
+  color: white;
+  justify-content: right;
+  align-items: center;
+  padding: 5px 10px;
+  height: 40px;
 }
 
 .header-socialmedia{
@@ -155,8 +165,8 @@ main{
 
 .info-button, .read-button{
   align-self: normal;
-  
 }
+
 .info-button :hover{
  background-color: yellowgreen;
 }
@@ -273,6 +283,126 @@ footer{
   margin-left: 60px;
 }
 
+#suggestion-slide {
+  
+  margin: 20px 20px 20px 20px;
+  position: relative;
+  overflow: hidden;
+  height: 450px;
+  border: solid;
+  
+
+  /* Your existing styles */
+
+  /* Add this transition property */
+  transition:  1s ease; /* Adjust the duration and easing as needed */
+}
+#blurry-background {
+ height: 450px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(15px);
+  z-index: 1;
+  /* overflow: hidden; */
+  transition: filter 1s ease; 
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  /* Adjust the duration and easing as needed */
+}
+#suggestion-wrapper{
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  top: 0;
+  justify-content: space-between;
+  border: solid yellow;
+  width: 99.5%;
+  height: 99%;
+  overflow: hidden;
+  
+}
+#slide-details{
+  border: solid;
+  display: grid;
+  width: 400px;
+  justify-content: center;
+  
+  /* align-items:center; */
+  
+  
+
+}
+#slide-title{
+  border: solid pink;
+  font-size: 40px;
+  align-self: center;
+}
+#slide-poster{
+ 
+  border: solid;
+  border-color: purple;
+  padding-right: 175px;
+  padding-left: 100px;
+
+  height: 100%;
+ overflow-y: hidden;
+  
+  
+}
+
+#slide-poster img{
+  transform: rotate(15deg) translateY(-80px);
+  border: solid white;
+  border-width: 0px 20px 0px 20px;
+  width: 350px;
+  height: 600px;
+  
+}
+
+#slide-buttons{
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  gap: 25px;
+  width: 300px;
+  
+  border:solid green;
+}
+
+#slide-buttons button{
+  
+    /* border-style: solid; */
+    border-style: solid;
+   
+    width: 100%;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 10px 10px/ 10px 10px;
+  
+}
+
+
+
+#mask{
+  /* border: solid; */
+}
+
+@keyframes zoomOut {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+/* Apply the animation to the .poster class */
+.poster {
+  /* Your existing styles for the .poster class */
+
+  /* Add the animation property */
+  animation: zoomOut 0.5s ease; /* Adjust the duration and easing as needed */
+}
 
 
 
