@@ -284,33 +284,30 @@ footer{
 }
 
 #suggestion-slide {
-  
   margin: 20px 20px 20px 20px;
   position: relative;
   overflow: hidden;
   height: 450px;
-  border: solid;
-  
-
-  /* Your existing styles */
-
-  /* Add this transition property */
-  transition:  1s ease; /* Adjust the duration and easing as needed */
+  /* border: solid blue; */
+  transition:  1s ease; 
+}
+#blurry-image{
+  filter: blur(1.5px);
+  zoom: 5.5;
+  transform: translateY(-100px) ; 
 }
 #blurry-background {
- height: 450px;
+
+  height: 445px;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter: blur(15px);
-  z-index: 1;
-  /* overflow: hidden; */
+  overflow: hidden;
   transition: filter 1s ease; 
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  /* Adjust the duration and easing as needed */
+  /* border:solid pink; */
+  
 }
 #suggestion-wrapper{
   position: absolute;
@@ -318,17 +315,18 @@ footer{
   grid-template-columns: repeat(2,auto);
   top: 0;
   justify-content: space-between;
-  border: solid yellow;
+  /* border: solid yellow; */
   width: 99.5%;
   height: 99%;
   overflow: hidden;
   
 }
 #slide-details{
-  border: solid;
+  /* border: solid; */
   display: grid;
   width: 400px;
   justify-content: center;
+  height: 100%;
   
   /* align-items:center; */
   
@@ -336,14 +334,15 @@ footer{
 
 }
 #slide-title{
-  border: solid pink;
+  /* border: solid pink; */
   font-size: 40px;
   align-self: center;
+  margin-top: 20px;
 }
 #slide-poster{
  
-  border: solid;
-  border-color: purple;
+  /* border: solid; */
+  /* border-color: purple; */
   padding-right: 175px;
   padding-left: 100px;
 
@@ -369,7 +368,7 @@ footer{
   gap: 25px;
   width: 300px;
   
-  border:solid green;
+  /* border:solid green; */
 }
 
 #slide-buttons button{
