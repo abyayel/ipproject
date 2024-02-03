@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    var randomReadButton = document.getElementById("random-read-button");
+    var randomReadButton = document.getElementById("header-random-read");
     if (randomReadButton) {
         randomReadButton.addEventListener("click", function () {
             redirectToRandomManga();
@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateSlide() {
     // const [title, image, readLink, infoLink ] = slides[currentSlide];
+    
 
     document.getElementById("slide-title").innerHTML = slides[currentSlide][0];
     document.getElementById("slide-poster").href = slides[currentSlide][2];
