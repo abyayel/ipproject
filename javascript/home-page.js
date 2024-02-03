@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    var randomReadButton = document.getElementById("random-read-button");
+    var randomReadButton = document.getElementById("header-random-read");
     if (randomReadButton) {
         randomReadButton.addEventListener("click", function () {
             redirectToRandomManga();
@@ -67,14 +67,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateSlide() {
     // const [title, image, readLink, infoLink ] = slides[currentSlide];
+    
 
     document.getElementById("slide-title").innerHTML = slides[currentSlide][0];
     document.getElementById("slide-poster").href = slides[currentSlide][2];
     document.getElementById("slide-poster").querySelector("img").src = slides[currentSlide][1];
-    document.getElementById("slide-read-button").href = slides[currentSlide][2];
-    document.getElementById("slide-info-button").href = slides[currentSlide][3];
-    document.getElementById("blurry-background").style.backgroundImage = `url('${slides[currentSlide][1]}')`;
-     document.getElementById("blurry-background").style.backgroundImage = `url('${slides[currentSlide][1]}')`;
+    document.getElementById("slide-read-link").href = slides[currentSlide][2];
+    document.getElementById("slide-info-link").href = slides[currentSlide][3];
+    document.getElementById("blurry-image").src =slides[currentSlide][1];
+    // document.getElementById("blurry-background").style.backgroundImage = `url('${slides[currentSlide][1]}')`;
+    //  document.getElementById("blurry-background").style.backgroundImage = `url('${slides[currentSlide][1]}')`;
 
 
 
