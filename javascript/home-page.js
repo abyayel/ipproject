@@ -71,8 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("slide-title").innerHTML = slides[currentSlide][0];
     document.getElementById("slide-poster").href = slides[currentSlide][2];
     document.getElementById("slide-poster").querySelector("img").src = slides[currentSlide][1];
-    document.getElementById("slide-read-button").href = slides[currentSlide][2];
-    document.getElementById("slide-info-button").href = slides[currentSlide][3];
+    document.getElementById("slide-read-link").href = slides[currentSlide][2];
+    document.getElementById("slide-info-link").href = slides[currentSlide][3];
     document.getElementById("blurry-image").src =slides[currentSlide][1];
     // document.getElementById("blurry-background").style.backgroundImage = `url('${slides[currentSlide][1]}')`;
     //  document.getElementById("blurry-background").style.backgroundImage = `url('${slides[currentSlide][1]}')`;
