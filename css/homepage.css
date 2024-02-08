@@ -37,21 +37,28 @@ header
 #first-header a{
   color: white;
 }
-
-.dark-mode{
-  height: 80%;
-  margin-left: var(--big-padding);
-  padding-left: var(--big-padding);
+#dark-mode-container{
   display: flex;
   align-items: center;
-  border-left: solid;
+  height: 80%;
+ padding-left: calc(var(--small-padding)*4);
+  margin-left: var(--big-padding);
+   border-left: solid;
   border-width: 0.5px;
+}
+
+.dark-mode{
+ 
+  /* border: solid; */
+  display: flex;
+  align-items: center;
+  
   cursor: pointer;
 }
 
 #dar-kmode-icon-container{
   margin-right: var(--small-padding);
-  margin-left: calc(var(--small-padding)*2);
+  
  
 }
 

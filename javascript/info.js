@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     darkModeToggle.addEventListener('click', toggleDarkMode);
 
     function toggleDarkMode() {
-        document.body.classList.toggle('dark-mode');
+        document.body.classList.toggle('dark-body');
 
         // Toggle moon and sun icons
         var iconElement = document.getElementById('darkModeIcon');
