@@ -1,5 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    var randomReadButton = document.getElementById("header-random-read");
+    if (randomReadButton) {
+        randomReadButton.addEventListener("click", function () {
+            redirectToRandomManga();
+        });
+    }
+
+    
+    function redirectToRandomManga() {
+        // Define an array of chapter URLs
+        var randomURLs = [
+            "info/naruto.html",
+            "info/a-bride's-story.html",
+            "info/cheese-in-the-trap","info/dragon-ball.html","info/one-piece.html","info/monster.html","info/sailor-moon.html"
+        ];
+
+        // Get a random index from the array
+        var randomIndex = Math.floor(Math.random() * randomURLs.length);
+
+        // Redirect the user to the random chapter URL
+        window.location.href = randomURLs[randomIndex];
+    }
+
+   
     var darkModeToggle = document.querySelector('.dark-mode');
     darkModeToggle.addEventListener('click', toggleDarkMode);
 
@@ -159,6 +183,16 @@ var randomReadButton = document.getElementById("random-read-button");
             subscribeOrRegister = ''; // Set the variable to 'register' when clicking the register link
             registrationModal.style.display = "none";
             loginModal.style.display = "flex";
+        });
+    }
+
+    //search logic
+    var searchBar = document.getElementsByClassName("search-container2");
+    var searchIcon = document.getElementById("search-icon");
+    if(searchIcon)
+    {
+        searchIcon.addEventListener("click", function () {
+            searchBar[0].style.display = (searchBar[0].style.display === "flex") ? "none" : "flex";
         });
     }
 
