@@ -200,16 +200,21 @@ header
         margin-left: 50px;
     }
     #trailer{
-      width: 300px;
+      width: 500px;
       height: 250px;
-        video{
-            border-left: solid white;
-            
-          height: 100%;
-          width: 100%;
-            border-radius: 20px;
-           
-        }    }
+      border-radius: 20px;
+      border-left: solid white;
+      overflow: hidden;
+         }
+    #trailer video{
+      /* border-left: solid white; */
+      
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+      /* border-radius: 20px; */
+     
+  }        
     #main-content-wrapper{
      
       padding: var(--big-padding) var(--big-padding);
@@ -527,5 +532,9 @@ body.modal-open {
   align-items: center;
   overflow: scroll;
   z-index: 1000;
+}
+
+.search-container2{
+  display: none;
 }
 

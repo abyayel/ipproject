@@ -100,7 +100,8 @@ document.addEventListener("DOMContentLoaded", function () {
             // header.style.transition = "transform 0.4s ease"; 
             if (scrollTop >= panelThreshold) {
                
-                header.style.transform = "translateY(-100%)";
+                header.style.transform = "translateY(-200%)";
+               
                 header.style.transition = "transform 0s ease";
                 // header.style.display = "none";
                 
@@ -108,10 +109,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 if(scrollTop<lastScrollTop)
                 {
                     // header.style.display= "grid";
+                    
                     header.style.transform="translateY(0%)";
-                    header.style.transition = "transform 1s ease";
+                    header.style.transition = "transform 0.3s ease";
 
                 }
+                
             } 
             lastScrollTop = scrollTop;
         });
@@ -124,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
             // Scroll slightly from the current position with a smooth animation
             window.scrollBy({
-                top: 50,  // Adjust the value based on your preference
+                top: 150,  // Adjust the value based on your preference
                 behavior: "smooth"
             });
         
