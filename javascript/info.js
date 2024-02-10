@@ -63,4 +63,40 @@ var randomReadButton = document.getElementById("random-read-button");
         window.location.href = randomURLs[randomIndex];
     }
 
+    
+
+
+
+
+
+
+    var readMoreLink = document.getElementById("readMoreLink");
+    var modal = document.getElementById("myModal");
+    var modalContent = document.getElementById("modalContent");
+
+    if (readMoreLink) {
+        readMoreLink.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default link behavior
+
+            // Show the modal with the full description
+           
+            var fullDescriptionElement = document.getElementById("description");
+            if (fullDescriptionElement) {
+                modalContent.innerHTML = fullDescriptionElement.innerHTML;
+                modal.style.display = "flex";
+                document.body.classList.add('modal-open');
+                
+
+            }
+        });
+    }
+
+    // Close the modal when clicking outside of it
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+            document.body.classList.remove('modal-open');
+        }
+    });
+
 });
