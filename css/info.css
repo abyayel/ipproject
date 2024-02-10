@@ -5,7 +5,8 @@
 
 body{ position: relative;
 margin: 0px 0px;
-a{text-decoration: none;}}
+a{text-decoration: none;}
+}
 
 button{
   cursor: pointer;
@@ -57,7 +58,7 @@ header
   cursor: pointer;
 }
 
-#dar-kmode-icon-container{
+#dark-mode-icon-container{
   margin-right: var(--small-padding);
   
  
@@ -147,12 +148,14 @@ header
 
 #comic-search-bar{
   margin-right: var(--small-padding);
+  background-color: red;
+  
 }
 
-#comic-search{
+.comic-search{
   height: 40px;
   width: 300px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   border-style: none;
   padding: var(--small-padding);
 }
@@ -185,7 +188,7 @@ header
     .comic-detail
     {
         width:600px;
-        height: 200px;
+        height: 100px;
         
     }
     #comic-extra-details{
@@ -197,12 +200,14 @@ header
         margin-left: 50px;
     }
     #trailer{
-      
+      width: 300px;
+      height: 250px;
         video{
             border-left: solid white;
+            
+          height: 100%;
+          width: 100%;
             border-radius: 20px;
-            width: 300px;
-            height: 250px;
            
         }    }
     #main-content-wrapper{
@@ -210,6 +215,7 @@ header
       padding: var(--big-padding) var(--big-padding);
       display: grid;
       grid-template-columns: 70% 30%;
+      gap: 20px;
     }
     .chapter-content{
        
@@ -268,15 +274,23 @@ header
     .recommended-list{
         /* background-color: gainsboro; */
         /* border-radius: 20px; */
-        padding: var(--big-padding);
+        /* padding: var(--big-padding); */
+        /* background-color: red; */
+        display: grid;
+        gap: 10px;
     }
     .recommended-heading{
         text-transform: capitalize;
     }
     .recommended-card{
       display: grid;
+      gap: 10px;
       grid-template-columns: repeat(2,auto)
+    
     }
+
+   
+
     footer{
         background-color: lightgray;
         padding: calc(var(--small-padding)*1.5) var(--big-padding) calc(var(--big-padding)*3) 0px;
@@ -348,6 +362,10 @@ header
   
       }
       
+
+      .chapter-search-container{
+        background-color: red;
+      }
       #chapter-search{
         /* height: 40px; */
         /* width: 300px; */
@@ -379,3 +397,135 @@ header
 #details-toggle{
   display: none;
 }
+
+#myModal {
+  
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  z-index: 1000;
+  
+}
+.modal-content-container{
+  position: relative;
+  top: 20px;
+  border-radius: 20px;
+  background-color: white;
+  overflow: scroll;
+}
+.modal-title{
+  position: relative;
+  display: block;
+  padding: 30px 30px 0;
+ h2{
+  text-align: center;
+ }
+  
+}
+
+.modal-content {
+  
+  padding: 20px;
+  max-width: 300px;
+  width: 100%;
+  /* overflow: auto; */
+}
+
+/* Additional styling for close button (optional) */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#description{
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#closeModal{
+  justify-self: right;
+  cursor: pointer;
+  
+  
+  
+}
+
+.modal-close-button{
+   top: 0;
+   right: 0;
+   position: absolute;
+   justify-content: right;
+   border-radius: 0 20px 0 20px;
+   /* border: solid pink; */
+   border-style: none;
+   width: 40px;
+   height: 40px;
+   font-size: 1.5rem;
+   font-weight: 700;
+ 
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+.search-container{
+  display: flex;vertical-align: center;
+  background-color: purple;
+  border-radius: 20px 20px 20px 20px;
+  justify-content: center;
+  width: 600px;
+  align-items: center;
+  /* height: 200px; */
+
+}
+#search-icon{
+  display: none;
+}
+#search-icon2{background-color:yellow;
+}
+
+.bookmark-container:hover .fa-bookmark::before{
+  content: "\f02e";
+  font-family: 'Font Awesome 5 Free';
+}
+
+#loginModal{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  z-index: 1000;
+}
+
+#registrationModal{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  z-index: 1000;
+}
+
