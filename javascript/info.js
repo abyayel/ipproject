@@ -99,4 +99,69 @@ var randomReadButton = document.getElementById("random-read-button");
         }
     });
 
+
+
+
+
+    var subscribeOrRegister = ''; // Variable to track whether to subscribe or register
+
+    var subscriberLink = document.getElementById("subscriber-button");
+    var modal = document.getElementById("myModal");
+    var modalContent = document.getElementById("modalContent");
+    var loginModal = document.getElementById("loginModal");
+    var registrationModal = document.getElementById("registrationModal");
+
+    if (subscriberLink) {
+        subscriberLink.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // Check the variable to determine whether to open login or register modal
+            if (subscribeOrRegister === 'register') {
+                registrationModal.style.display = "flex";
+            } else {
+                loginModal.style.display = "flex";
+            }
+
+            document.body.classList.add('modal-open');
+        });
+    }
+
+    // Close the modals when clicking outside of them
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+            document.body.classList.remove('modal-open');
+        }
+        if (event.target === loginModal) {
+            loginModal.style.display = "none";
+            document.body.classList.remove('modal-open');
+            subscribeOrRegister = ''; // Reset the variable when closing login modal
+        }
+        if (event.target === registrationModal) {
+            registrationModal.style.display = "none";
+            document.body.classList.remove('modal-open');
+            subscribeOrRegister = 'register'; // Reset the variable when closing register modal
+        }
+    });
+
+    var showRegisterModal = document.getElementById("showRegisterModal");
+    if (showRegisterModal) {
+        showRegisterModal.addEventListener("click", function () {
+            subscribeOrRegister = 'register'; // Set the variable to 'register' when clicking the register link
+            loginModal.style.display = "none";
+            registrationModal.style.display = "flex";
+        });
+    }
+
+    var showLoginModal = document.getElementById("showLoginModal");
+    if(showLoginModal){
+        showLoginModal.addEventListener("click", function () {
+            subscribeOrRegister = ''; // Set the variable to 'register' when clicking the register link
+            registrationModal.style.display = "none";
+            loginModal.style.display = "flex";
+        });
+    }
+
+
+
 });

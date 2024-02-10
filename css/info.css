@@ -495,3 +495,37 @@ body.modal-open {
 }
 #search-icon2{background-color:yellow;
 }
+
+.bookmark-container:hover .fa-bookmark::before{
+  content: "\f02e";
+  font-family: 'Font Awesome 5 Free';
+}
+
+#loginModal{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  z-index: 1000;
+}
+
+#registrationModal{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  z-index: 1000;
+}
+
