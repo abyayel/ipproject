@@ -43,51 +43,33 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = randomURLs[randomIndex];
     }
  
-    const slides =[ [
-    "Jujustu Kaisen", 
-    "info/img/jujutsu-kaisen.jpg",
-    "panels/jujutsu-kaisen/ch1/panel.html",   // Read link
-    "info/jujustu-kaisen.html"               // Info link
-  ],
-  [
-    "Naruto",
-    "info/img/naruto.jpg",
-    "panels/naruto/ch1/panel.html",
-    "info/naruto.html"
-  ],
-  [
-    "One Piece",
-    "info/img/one-piece.jpg",
-    "panels/one-piece/ch1/panel.html",
-    "info/one-piece.html"
-  ]
-];
 
+  const slides = document.querySelectorAll('.suggestion-slide');
   let currentSlide = 0;
 
+  function showSlide(index) {
+      slides.forEach((slide, i) => {
+          if (i === index) {
+           
+              slide.style.display = 'block';
+          } else {
+            
+              slide.style.display = 'none';
+          }
+      });
+  }
+
   function updateSlide() {
-    // const [title, image, readLink, infoLink ] = slides[currentSlide];
-    
-
-    document.getElementById("slide-title").innerHTML = slides[currentSlide][0];
-    document.getElementById("slide-poster").href = slides[currentSlide][2];
-    document.getElementById("slide-poster").querySelector("img").src = slides[currentSlide][1];
-    document.getElementById("slide-read-link").href = slides[currentSlide][2];
-    document.getElementById("slide-info-link").href = slides[currentSlide][3];
-    document.getElementById("blurry-image").src =slides[currentSlide][1];
-    // document.getElementById("blurry-background").style.backgroundImage = `url('${slides[currentSlide][1]}')`;
-    //  document.getElementById("blurry-background").style.backgroundImage = `url('${slides[currentSlide][1]}')`;
-
-
-
-    currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+      currentSlide = (currentSlide + 1) % slides.length;
   }
 
   function startSlideshow() {
-    updateSlide(); // Initial update
-    setInterval(updateSlide, 5000); // Update every 5 seconds
+      updateSlide(); // Initial update
+      setInterval(updateSlide, 5000); // Update every 5 seconds
   }
 
   startSlideshow();
+
 
 });

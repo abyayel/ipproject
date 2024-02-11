@@ -161,19 +161,19 @@ header
   outline: none; /* This removes the outline when focused, adjust as needed */
 }
 
-#suggestion-slide {
+.suggestion-slide {
+  display: none;
   margin: 20px 20px 20px 20px;
   position: relative;
   overflow: hidden;
   height: 450px;
-  transition: transform 2s ease;
-}
-#blurry-image{
+  
+.blurry-image{
   filter: blur(1.5px);
   zoom: 5.5;
   transform: translateY(-100px) ; 
 }
-#blurry-background {
+.blurry-background {
 
   height: 445px;
   top: 0;
@@ -186,7 +186,7 @@ header
   /* border:solid pink; */
   
 }
-#suggestion-wrapper{
+.suggestion-wrapper{
   position: absolute;
   display: grid;
   grid-template-columns: repeat(2,auto);
@@ -198,7 +198,7 @@ header
   overflow: hidden;
   
 }
-#slide-details{
+.slide-details{
   /* border: solid; */
   display: grid;
   width: 400px;
@@ -207,33 +207,36 @@ header
   /* align-items:center; */
 }
 
-#slide-title{
+.slide-title{
   /* border: solid pink; */
   font-size: 40px;
   align-self: center;
   margin-top: 20px;
 }
 
-#slide-poster{
+.slide-poster{
    
   padding-right: 175px;
   padding-left: 100px;
   height: 100%;
   overflow-y: hidden;
-  
+  transition: transform 2s ease-in-out;
+}
   
 }
 
-#slide-poster img{
+.slide-poster img{
   transform: rotate(15deg) translateY(-80px);
   border: solid white;
   border-width: 0px 20px 0px 20px;
   width: 350px;
   height: 600px;
+  
+  
 
 }
 
-#slide-buttons{
+.slide-buttons{
   align-self: center;
   display: grid;
   grid-template-columns: repeat(2,auto);
@@ -243,7 +246,7 @@ header
   /* border:solid green; */
 }
 
-#slide-buttons button{
+.slide-buttons button{
   
     /* border-style: solid; */
     border-style: solid;
@@ -254,6 +257,7 @@ header
     border-radius: 5px 5px/ 5px 5px;
   
 }
+
 
 main{
   padding: var(--small-padding) var(--big-padding);

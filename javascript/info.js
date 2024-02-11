@@ -116,6 +116,8 @@ var randomReadButton = document.getElementById("random-read-button");
     }
 
     // Close the modal when clicking outside of it
+    
+
     window.addEventListener("click", function (event) {
         if (event.target === modal) {
             modal.style.display = "none";
@@ -186,16 +188,161 @@ var randomReadButton = document.getElementById("random-read-button");
         });
     }
 
+    var closeModalButtons = document.querySelectorAll(".modal-close-button");
+    closeModalButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            closeModal();
+        });
+    });
+
+    // Close the login modal when clicking the close button
+    var closeLoginModalButton = document.getElementById("closeLoginModal");
+    if (closeLoginModalButton) {
+        closeLoginModalButton.addEventListener("click", function () {
+            closeLoginModal();
+        });
+    }
+
+    // Close the registration modal when clicking the close button
+    var closeRegistrationModalButton = document.getElementById("closeRegistrationModal");
+    if (closeRegistrationModalButton) {
+        closeRegistrationModalButton.addEventListener("click", function () {
+            closeRegistrationModal();
+        });
+    }
+
+    // Function to close the main modal
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+        document.body.classList.remove('modal-open');
+    }
+
+    // Function to close the login modal
+    function closeLoginModal() {
+        var loginModal = document.getElementById("loginModal");
+        loginModal.style.display = "none";
+        document.body.classList.remove('modal-open');
+    }
+
+    // Function to close the registration modal
+    function closeRegistrationModal() {
+        var registrationModal = document.getElementById("registrationModal");
+        registrationModal.style.display = "none";
+        document.body.classList.remove('modal-open');
+    }
+
+
+
+
     //search logic
+    var searchBarVisible = true;
     var searchBar = document.getElementsByClassName("search-container2");
     var searchIcon = document.getElementById("search-icon");
     if(searchIcon)
     {
         searchIcon.addEventListener("click", function () {
-            searchBar[0].style.display = (searchBar[0].style.display === "flex") ? "none" : "flex";
+           
+            if(searchBar[0].style.display === "flex")
+            {
+                searchBar[0].style.display = "none";
+            }
+            else{
+                searchBar[0].style.display = "flex";
+                searchBarVisible = true;
+            }
         });
+
     }
+    
+    
+    
+    
+        function updateSearchToggleState() {
+            var isSmallScreen = window.innerWidth < 1300;
+    
+            if (!isSmallScreen) {
+                
+                if (searchBarVisible) {
+                    searchBar[0].style.display="none";
+                   searchBarVisible = false;
+                }
+            } 
+           
+        }
+    
+        
+        updateSearchToggleState();
+    
+      window.addEventListener("resize", updateSearchToggleState);
+    
+        
+   
+    
 
+        
+    
+        var bookmarkContainer = document.querySelector('.bookmark-container');
+        var bookmarkIcon = bookmarkContainer.querySelector('.fa-bookmark');
+    
+        bookmarkContainer.addEventListener('mouseover', function () {
+            // Change the entire class on mouseover
+            bookmarkIcon.className = 'fas fa-bookmark mr-2';
+        });
+    
+        bookmarkContainer.addEventListener('mouseout', function () {
+            // Restore the original class on mouseout
+            bookmarkIcon.className = 'far fa-bookmark';
+        });
+      
 
+        var detailsVisible = true;
+        var  detailsToggle= document.getElementById("details-toggle");
+        var comicExtraDetails = document.getElementById("comic-extra-details");
+        var description = document.getElementById("description");
+        detailsToggle.innerHTML = "View Detail";
+        if(detailsToggle)
+        {
+            detailsToggle.addEventListener("click", function(){
+                if (comicExtraDetails.style.display === "grid") {
+                    comicExtraDetails.style.display = "none";
+                    description.style.display = "none";
+                    readMoreLink .style.display = "none";
+                    detailsToggle.innerHTML = "View Detail";
+                } else {
+                    comicExtraDetails.style.display = "grid";
+                    description.style.display = "-webkit-box";
+                    readMoreLink .style.display = "grid";
+                    detailsToggle.innerHTML = "Hide Detail";
+                    detailsVisible = true;
+                }
+            });
+        }
+       
+        
+         
 
-});
+        function updateDetailsToggleState() {
+            var isSmallScreen = window.innerWidth < 730;
+    
+            if (!isSmallScreen) {
+                
+                if (detailsVisible) {
+                    comicExtraDetails.style.display = "none";
+                    description.style.display = "none";
+                    readMoreLink.style.display = "none";
+                    detailsToggle.innerHTML = "View Detail";
+                    detailsVisible = false;
+                }
+            } 
+           
+        }
+    
+        
+        updateDetailsToggleState();
+    
+        window.addEventListener("resize", updateDetailsToggleState);
+    
+        
+    });
+        

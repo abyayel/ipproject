@@ -501,10 +501,7 @@ body.modal-open {
 #search-icon2{background-color:yellow;
 }
 
-.bookmark-container:hover .fa-bookmark::before{
-  content: "\f02e";
-  font-family: 'Font Awesome 5 Free';
-}
+
 
 #loginModal{
   display: none;
@@ -535,6 +532,233 @@ body.modal-open {
 }
 
 .search-container2{
-  display: none;
+  display: none ;
+}
+@media only screen and (min-width: 1300px){
+  .search-container2{
+    display: none !important ;
+  }
 }
 
+@media only screen and (max-width: 1300px)
+{
+   
+  #info-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    
+    
+    padding: calc(var(--big-padding)*4) var(--big-padding);
+    /* grid-template-areas: 
+        "item1 item2 "
+        "item3 item3 "; */
+
+}
+.comic-img{
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.comic-img img{
+  width: 250px ;
+  height: 300px;
+ 
+} 
+.comic-detail{
+  grid-column: 1;
+  grid-row: 1;
+}
+#comic-vid-detail{
+  display: grid;
+  /* grid-area: item3; */
+  grid-area: 3 /1 / span 1 / span 2;
+ margin: 0px 0px;
+ width: 100%;
+ 
+
+}
+  
+#comic-extra-details{
+/* grid-column: 2; */
+width: 100%;
+
+
+}
+
+#trailer
+{
+  width: 100%;
+  height: 500px;
+ /* grid-column: 1; */
+}
+  
+  
+  #search-icon{
+    display: block;
+  }
+  .search-container{
+    display: none;
+  }
+  .sub-header{
+   position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(5,auto);
+    grid-template-areas: 
+        "item1 item2 item3 item4 item5"
+        "item6 item6 item6 item6 item6";
+    
+    
+    padding: var(--small-padding) var(--small-padding);
+    justify-content: space-between;
+  }
+  .search-container2{
+    /* display: flex; */
+    justify-content: center;
+    top: 145px;
+  
+    height: 50px;
+    position:absolute;
+    /* grid-area: item6; */
+    width: 100%;
+    background-color: blue;
+  }
+  .comic-search{
+    height: 40px;
+    width: 90%;
+    /* border-radius: 10px; */
+    border-style: none;
+    padding: var(--small-padding);
+  }
+  
+  #main-content-wrapper
+  {
+    display: grid;
+    grid-template-columns: repeat(1,auto);
+  }
+  .recommended-card
+  {
+    display: grid;
+    grid-template-columns: 200px 500px;
+    
+    gap: 0px;
+  }
+  .recommended-comic-poster{
+    
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+@media only screen and (max-width: 885px)
+{
+ #info-wrapper{
+  /* display: grid !important; */
+  /* grid-template-columns: repeat(1,auto); */
+  /* grid-template-rows: repeat(3,auto); */
+  /* grid-template-rows: repeat(2,auto); */
+ }
+ .comic-img{
+  grid-column: 1;
+  grid-row: 1;
+  justify-content: center;
+  display: grid;
+  
+  margin: 0px 0px;
+ }
+
+ .comic-img img{
+   width: auto;
+   height:250px;
+ }
+ 
+ .comic-name{
+  justify-content: center;
+  
+  justify-content: center;
+  display: grid;
+  margin: 0px 0px;
+ }
+
+.read-save-button{
+   justify-content: center ; 
+  display: grid ;
+  gap: 20px;
+
+margin: auto auto;
+} 
+  
+.bookmark-container{
+  margin-right: auto;
+}
+
+
+ .comic-detail
+ {
+  grid-column: 1;
+  grid-row: 2;
+  height: 100%;
+  width:auto;
+  
+ }
+ #comic-vid-detail{
+  
+  grid-row: 3;
+ }
+
+ #trailer{display: none;}
+ 
+ #main-content{
+  width:auto;
+ }
+  
+ 
+}
+@media only screen and (min-width:731px)
+{
+  #description {
+    display: -webkit-box !important;
+  }
+  #comic-extra-details{
+    display: grid  !important;
+  }
+  #readMoreLink{
+    display: grid  !important;
+  }
+
+}
+@media only screen and (max-width: 730px)
+{
+
+  #description {
+    display: none ;
+  }
+  #comic-extra-details{
+    display: none  ;
+  }
+  #readMoreLink{
+    display: none ;
+  }
+  
+#info-wrapper{
+  justify-content: center;
+}
+
+#details-toggle{
+  display: grid;
+}
+
+#details-toggle-container{
+  display: grid; 
+  justify-content: center;
+  grid-row:4 ;
+}
+}
+
+@media only screen and (max-width: 575px){
+
+#socila-media {
+    
+    display: none;
+}
+}
