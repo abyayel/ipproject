@@ -301,9 +301,6 @@ background-color: yellow;
 .dropdown-container:hover .dropdown-content {
   display: block;}
 
-#comic-search-bar{
-}
-
 #search-icon{
   display: none;
 }
@@ -689,14 +686,3 @@ padding-bottom: var(--big-padding);
 display: none;
 }
 }
-
-
-
-
-
-
-
-
-
-
-
