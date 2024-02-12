@@ -265,7 +265,7 @@ background-color: yellow;
   font-size: 16px;
   border: none;
   cursor: pointer;
-  pointer-events: none;
+  
 }
 
 .dropdown-content {
