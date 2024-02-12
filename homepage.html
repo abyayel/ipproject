@@ -1,285 +1,299 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Comfanatics-index</title>
-<link rel="icon" href="logo/faviconlogo2.png" type="png"></link>
-<link rel="stylesheet" type="text/css" href="css/homepage.css"></link>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-<script src="javascript/home-page.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comfanatics-index</title>
+    <link rel="icon" href="logo/faviconlogo2.png" type="png">
+    <link rel="stylesheet" type="text/css" href="css/homepage.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <script src="javascript/home-page.js"></script>
 </head>
 
 <body>
- 
-    <header>
 
-         <div id="first-header" >
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content-container">
+            <div class="modal-title">
+                <h2>Welcome back</h2>
+                <button class="modal-close-button"> <span class="close" id="closeLoginModal">&times;</span></button>
+            </div>
+            <div class="modal-content" id="loginModalContent">
+                <!-- Login form content -->
+                <form id="loginForm">
+                    <label for="loginUsername">Email Address</label>
+                    <br>
+                    <input type="text" id="loginUsername" name="loginUsername" placeholder="name@email.com">
+                    <br>
+                    <label for="loginPassword">Password</label>
+                    <br>
+                    <input type="password" id="loginPassword" name="loginPassword" placeholder="Password">
+                    <br>
+                    <button type="button" id="loginButton">Sign-in</button>
+                </form>
+                <p>Don't have an account? <span id="showRegisterModal">Register</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div class="modal" id="registrationModal">
+        <div class="modal-content-container">
+            <div class="modal-title">
+                <h2>Create an Account </h2>
+                <button class="modal-close-button"> <span class="close" id="closeRegistrationModal">&times;</span></button>
+            </div>
+            <div class="modal-content" id="registerModalContent">
+                <!-- Registration form content -->
+                <form id="registrationForm">
+                    <label for="fullName">Your Name</label>
+                    <br>
+                    <input type="text" id="fullName" name="fullName" placeholder="Name">
+                    <br>
+                    <label for="email">Email Address</label>
+                    <br>
+                    <input type="email" id="email" name="email" placeholder="name@email.com">
+                    <br>
+                    <label for="newPassword">Password</label>
+                    <br>
+                    <input type="password" id="newPassword" name="newPassword" placeholder="Password">
+                    <br>
+                    <label for="confirmPassword">Confirm Password</label>
+                    <br>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+                    <br>
+                    <button type="button" id="registerButton">Sign-up</button>
+                </form>
+                <p>Already have an account? <span id="showLoginModal">Sign In</span></p>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div id="first-header">
             <div id="header-random-read">
+                <i class="fa fa-glasses"></i>
                 Read Random
             </div>
             <div id="socila-media">
-            <strong>Follow us:</Strong>
-            <a href="https://www.instagram.com/comfanatics123/" target="blank">Instagram</a>
-            <a href="https://twitter.com/comfanatics123" target="blank">Twitter</a>
-             </div>
-             <div id="dark-mode-container">
-             <div class="dark-mode">
-                <div id="dar-kmode-icon-container">
-                <i id="darkModeIcon" class="far fa-moon"></i>
-                </div>
-                <div id="dark-mode-text-container">
-                <span id="darkModeText">Dark Mode</span>
-                </div>
+                <strong>Follow us:</Strong>
+                <a href="https://www.instagram.com/comfanatics123/" target="blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://twitter.com/comfanatics123" target="blank"> <i class="fab fa-twitter"></i> Twitter</a>
             </div>
+            <div id="dark-mode-container">
+                <div class="dark-mode">
+                    <div id="dark-mode-icon-container">
+                        <i id="darkModeIcon" class="fas fa-moon mr-2"></i>
+                    </div>
+                    <div id="dark-mode-text-container">
+                        <span id="darkModeText"> Dark Mode</span>
+                    </div>
+                </div>
             </div>
 
-        </div> 
+        </div>
 
         <div class="sub-header">
             <div class="header-logo">
                 <a href="../homepage.html">
-                <img src="../../logo/Logo.png" alt="Logo" >
+                    <img src="../../logo/Logo.png" alt="Logo">
+                </a>
             </div>
-        
-          
-    
-               
-    <div class="header-index">
-        <div class="dropdown-container">
-            <button class="dropdown-btn">Types</button>
-            <div class="dropdown-content">
-                <ul>
-                    <li><a href="../types/comic/comic.html" title="Comic">Comic</a></li>
-                    <li><a href="../types/manga/manga.html" title="Manga">Manga</a></li>
-                    <li><a href="../types/manhwa/manhwa.html" title="Manhwa">Manhwa</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <div id="comic-search-bar"><input id="comic-search" type="search" placeholder="&#128269 Search comic" ></div>
-    
-            </div>
-    <div class="suggestion-slide">
-        <div class="blurry-background"><img src="info/img/jujutsu-kaisen.jpg" alt="" class="blurry-image"></div>
-        <div class="suggestion-wrapper">
-            <div class="slide-details">
-              <div class="slide-title">Jujustu Kaisen</div> 
-              <div class="slide-buttons">
-              <div class="slide-read"><a class="slide-read-link"  href="panels/jujutsu-kaisen/ch1/panel.html"><button class="slide-read-button">Read</button></a></div>
-              <div class="slide-info"><a class="slide-info-link" href="info/jujustu-kaisen.html"><button class="slide-info-button">Info</button></a></div>
-              </div>
-            </div>
-            <div class="slide-poster"><a href="info/jujustu-kaisen.html">
-                <img src="info/img/jujutsu-kaisen.jpg" alt="Slide Show poster">
-              </a></div>
-        </div>
-    
-    </div>
-    <div class="suggestion-slide">
-        <div class="blurry-background"><img src="info/img/naruto.jpg" alt="" class="blurry-image"></div>
-        <div class="suggestion-wrapper">
-            <div class="slide-details">
-              <div class="slide-title">Naruto</div> 
-              <div class="slide-buttons">
-              <div class="slide-read"><a class="slide-read-link"  href="panels/naruto/ch1/panel.html"><button class="slide-read-button">Read</button></a></div>
-              <div class="slide-info"><a class="slide-info-link" href="info/naruto.html"><button class="slide-info-button">Info</button></a></div>
-              </div>
-            </div>
-            <div class="slide-poster"><a href="info/naruto.html">
-                <img src="info/img/naruto.jpg" alt="Slide Show poster">
-              </a></div>
-        </div>
-    
-    </div>  
-    <div class="suggestion-slide">
-        <div class="blurry-background"><img src="info/img/one-piece.jpg" alt="" class="blurry-image"></div>
-        <div class="suggestion-wrapper">
-            <div class="slide-details">
-              <div class="slide-title">One Piece</div> 
-              <div class="slide-buttons">
-              <div class="slide-read"><a class="slide-read-link"  href="panels/one-piece/ch1/panel.html"><button class="slide-read-button">Read</button></a></div>
-              <div class="slide-info"><a class="slide-info-link" href="info/one-piece.html"><button class="slide-info-button">Info</button></a></div>
-              </div>
-            </div>
-            <div class="slide-poster"><a href="info/one-piece.html">
-                <img src="info/img/one-piece.jpg" alt="Slide Show poster">
-              </a></div>
-        </div>
-    
-    </div>  
-    <div class="suggestion-slide">
-        <div class="blurry-background"><img src="info/img/a-bride's-story.jpg" alt="" class="blurry-image"></div>
-        <div class="suggestion-wrapper">
-            <div class="slide-details">
-              <div class="slide-title">A Bride's Story</div> 
-              <div class="slide-buttons">
-              <div class="slide-read"><a class="slide-read-link"  href="panels/a-bride's-story/ch1/panel.html"><button class="slide-read-button">Read</button></a></div>
-              <div class="slide-info"><a class="slide-info-link" href="info/a-bride's-story.html"><button class="slide-info-button">Info</button></a></div>
-              </div>
-            </div>
-            <div class="slide-poster"><a href="info/a-bride's-story.html">
-                <img src="info/img/a-bride's-story.jpg" alt="Slide Show poster">
-              </a></div>
-        </div>
-    
-    </div>     
 
-
-        
-    </header> 
-
-<main>
-<div class="cat-heading">
-    <h2>Recommended</h2>
-</div>
-
-<div id="rec-list"> <!--scroll feauters can be added here -->
-
-    <div class="rec-comic-card">
-       
-        
-        <div class="rec-poster">
-            <div class="hover-card">
-                <div class="hover-card-title">Jujustu Kaisen</div>
-                <div class="read-button">
-                    <a href="./panels/jujutsu-kaisen/ch1/pannel.html"><button>Read</button></a></div>
-                <div class="info-button">
-                    <a href="info/jujustu-kaisen.html"><button>Info</button></a>
-                </div>
-               
-    
-            </div>
-            <img src="info/img/jujutsu-kaisen.jpg" alt="jujutsukaisen-poster">
-        </div>
-        <div class="comic-desc"><strong><a href="info/jujustu-kaisen.html">Jujutsu Kaisen</a></strong></div>
-        <!--link to front page but can also give the option to panel page-->
-    
-    </div>
-    
-    
-    <div class="rec-comic-card">
-        
-        <div class="rec-poster">
-            <div class="hover-card">
-                <div class="hover-card-title">Naruto</div>
-                <div class="read-button"><a href="./panels/naruto/ch1/pannel.html"><button>Read</button></a></div>
-                <div class="info-button">
-                    <a href="info/naruto.html"><button>Info</button></a>
-                </div>
-            </div>
-                <img src="info/img/naruto.jpg" alt="naruto poster">
-        </div>
-    <div class="comic-desc"><strong><a href="info/naruto.html">Naruto</a></strong></div>
-    </div>    
-        
-    <div class="rec-comic-card">
-       
-            <div class="rec-poster">
-                <div class="hover-card">
-                    <div class="hover-card-title">One Piece</div>
-                    <div class="read-button"><a href="./panels/one-piece/ch1/pannel.html"><button>Read</button></a></div>
-                    <div class="info-button">
-                        <a href="info/one-piece.html"><button>Info</button></a>
+            <div class="header-index">
+                <div class="dropdown-container">
+                    <button class="dropdown-btn">Types</button>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a href="../types/comic/comic.html" title="Comic">Comic</a></li>
+                            <li><a href="../types/manga/manga.html" title="Manga">Manga</a></li>
+                            <li><a href="../types/manhwa/manhwa.html" title="Manhwa">Manhwa</a></li>
+                        </ul>
                     </div>
-        
                 </div>
-                    <img src="info/img/one-piece.jpg" alt="one piece poster" >
+            </div>
+
+            <div id="comic-search-bar">
+                <i id="search-icon" class="fas fa-search"></i>
+                <div class="search-container"><input class="comic-search" type="search" placeholder=" Search comic....."><i id="search-icon2" class="fas fa-search"></i></div>
+            </div>
+            <div id="subscriber-button">
+                <i class="fas fa-user-circle mr-2"></i>
+                <span id="subscriber-text">
+                    Subscriber
+                </span>
+            </div>
+            <div class="search-container2"><input class="comic-search" type="search" placeholder="Search comic....."><i id="search-icon2" class="fas fa-search"></i></div>
+        </div>
+
+        <div class="suggestion-slide">
+            <div class="blurry-background"><img src="info/img/jujutsu-kaisen.jpg" alt="" class="blurry-image"></div>
+            <div class="suggestion-wrapper">
+                <div class="slide-details">
+                    <div class="slide-title">A Bride's Story</div>
+                    <div class="slide-buttons">
+                        <div class="slide-read"><a class="slide-read-link" href="panels/jujutsu-kaisen/ch1/panel.html"><button class="slide-read-button">Read</button></a></div>
+                        <div class="slide-info"><a class="slide-info-link" href="info/jujutsu-kaisen.html"><button class="slide-info-button">Info</button></a></div>
+                    </div>
+                </div>
+                <div class="slide-poster"><a href="info/jujutsu-kaisen.html">
+                        <img src="info/img/jujutsu-kaisen.jpg" alt="Slide Show poster">
+                    </a></div>
+            </div>
+        </div>
+        <div class="suggestion-slide">
+            <div class="blurry-background"><img src="info/img/naruto.jpg" alt="" class="blurry-image"></div>
+            <div class="suggestion-wrapper">
+                <div class="slide-details">
+                    <div class="slide-title">A Bride's Story</div>
+                    <div class="slide-buttons">
+                        <div class="slide-read"><a class="slide-read-link" href="panels/naruto/ch1/panel.html"><button class="slide-read-button">Read</button></a></div>
+                        <div class="slide-info"><a class="slide-info-link" href="info/naruto.html"><button class="slide-info-button">Info</button></a></div>
+                    </div>
+                </div>
+                <div class="slide-poster"><a href="info/naruto.html">
+                        <img src="info/img/naruto.jpg" alt="Slide Show poster">
+                    </a></div>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="cat-heading">
+            <h2>Recommended</h2>
+        </div>
+
+        <div id="rec-list">
+
+            <div class="rec-comic-card">
+
+                <div class="rec-poster">
+                    <div class="hover-card">
+                        <div class="hover-card-title">Jujustu Kaisen</div>
+                        <div class="read-button">
+                            <a href="./panels/jujutsu-kaisen/ch1/pannel.html"><button>Read</button></a></div>
+                        <div class="info-button">
+                            <a href="info/jujustu-kaisen.html"><button>Info</button></a>
+                        </div>
+
+                    </div>
+                    <img src="info/img/jujutsu-kaisen.jpg" alt="jujutsukaisen-poster">
+                </div>
+                <div class="comic-desc"><strong><a href="info/jujustu-kaisen.html">Jujutsu Kaisen</a></strong></div>
+                <!--link to front page but can also give the option to panel page-->
+
+            </div>
+
+
+            <div class="rec-comic-card">
+
+                <div class="rec-poster">
+                    <div class="hover-card">
+                        <div class="hover-card-title">Naruto</div>
+                        <div class="read-button"><a href="./panels/naruto/ch1/pannel.html"><button>Read</button></a></div>
+                        <div class="info-button">
+                            <a href="info/naruto.html"><button>Info</button></a>
+                        </div>
+                    </div>
+                    <img src="info/img/naruto.jpg" alt="naruto poster">
+                </div>
+                <div class="comic-desc"><strong><a href="info/naruto.html">Naruto</a></strong></div>
+            </div>
+
+            <div class="rec-comic-card">
+
+                <div class="rec-poster">
+                    <div class="hover-card">
+                        <div class="hover-card-title">One Piece</div>
+                        <div class="read-button"><a href="./panels/one-piece/ch1/pannel.html"><button>Read</button></a></div>
+                        <div class="info-button">
+                            <a href="info/one-piece.html"><button>Info</button></a>
+                        </div>
+
+                    </div>
+                    <img src="info/img/one-piece.jpg" alt="one piece poster">
                 </div>
                 <div class="comic-desc"><strong><a href="info/one-piece.html">One Piece</a></strong></div>
-    </div>              
-            
+            </div>
 
-
-</div>
-
-<div class="cat-heading">
-<h2>Latest releases</h2>
-</div>
-
-<div id="latest-list">
-
-    <div class="comic-card" >
-        
-        <div class="poster" >
-            <a href="./info/jujustu-kaisen.html"><img src="info/img/jujutsu-kaisen.jpg" alt="jujutsukaisen poster" ></img></a>
         </div>
-         
-        <div class="comic-detail">
-        <div class="comic-name"><big><strong><a href="../../info/jujustu-kaisen.html"><strong>Jujustu Kaisen</strong></big></a></strong></div>
 
+        <div class="cat-heading">
+            <h2>Latest releases</h2>
+        </div>
 
-        <div class="chap-list">
-            <div class="chapters" ><a href="panels/jujutsu-kaisen/ch5/panel.html" >Chapter 5</a></div>
-            <div class="chapters" ><a href="panels/jujutsu-kaisen/ch4/panel.html" >Chapter 4</a></div>
-            <div class="chapters" ><a href="panels/jujutsu-kaisen/ch3/panel.html" >Chapter 3</a></div>
-        </div>
-        </div>
-    </div>
+        <div id="latest-list">
 
-    <div class="comic-card" >
-        <div class="poster" >
-            <a href="info/one-piece.html"><img src="info/img/one-piece.jpg"></a>
-        </div>
-        <div class="comic-detail">
+            <div class="comic-card">
 
-        <div class="comic-name"><big><strong><a href=" " >One Piece</a></strong></big></div>
+                <div class="poster">
+                    <a href="./info/jujustu-kaisen.html"><img src="info/img/jujutsu-kaisen.jpg" alt="jujutsukaisen poster"></a>
+                </div>
 
-        <div class="chap-list">
-            <div class="chapters"><a href="./panels/one-piece/ch3/pannel.html" >Chapter 3</a></div>
-            <div class="chapters"><a href="./panels/one-piece/ch2/pannel.html" >Chapter 2</a></div>
-            <div class="chapters"><a href="./panels/one-piece/ch1/pannel.html" >Chapter 1</a></div>
-        </div>
-        </div>
-    </div>
+                <div class="comic-detail">
+                    <div class="comic-name"><big><strong><a href="../../info/jujustu-kaisen.html"><strong>Jujustu Kaisen</strong></big></a></strong></div>
 
-    <div class="comic-card" >
-        <div class="poster" >
-            <a href="info/akira.html"><img src="info/img/akira.jpg"></a>
-        </div>
-        <div class="comic-detail">
+                    <div class="chap-list">
+                        <div class="chapters"><a href="panels/jujutsu-kaisen/ch5/panel.html">Chapter 5</a></div>
+                        <div class="chapters"><a href="panels/jujutsu-kaisen/ch4/panel.html">Chapter 4</a></div>
+                        <div class="chapters"><a href="panels/jujutsu-kaisen/ch3/panel.html">Chapter 3</a></div>
+                    </div>
+                </div>
+            </div>
 
-        <div class="comic-name"><big><strong><a href="./info/akira.html" >Akira</a></strong></big></div>
+            <div class="comic-card">
+                <div class="poster">
+                    <a href="info/one-piece.html"><img src="info/img/one-piece.jpg"></a>
+                </div>
+                <div class="comic-detail">
 
-        <div class="chap-list">
-            <div class="chapters"><a href="./panels/akira/ch3/panel.html">Chapter 3</a></div>
-            <div class="chapters"><a href="./panels/akira/ch2/panel.html">Chapter 2</a></div>
-            <div class="chapters"><a href="./panels/akira/ch1/panel.html">Chapter 1</a></div>
+                    <div class="comic-name"><big><strong><a href=" ">One Piece</a></strong></big></div>
+
+                    <div class="chap-list">
+                        <div class="chapters"><a href="./panels/one-piece/ch3/pannel.html">Chapter 3</a></div>
+                        <div class="chapters"><a href="./panels/one-piece/ch2/pannel.html">Chapter 2</a></div>
+                        <div class="chapters"><a href="./panels/one-piece/ch1/pannel.html">Chapter 1</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comic-card">
+                <div class="poster">
+                    <a href="info/akira.html"><img src="info/img/akira.jpg"></a>
+                </div>
+                <div class="comic-detail">
+
+                    <div class="comic-name"><big><strong><a href="./info/akira.html">Akira</a></strong></big></div>
+
+                    <div class="chap-list">
+                        <div class="chapters"><a href="./panels/akira/ch3/panel.html">Chapter 3</a></div>
+                        <div class="chapters"><a href="./panels/akira/ch2/panel.html">Chapter 2</a></div>
+                        <div class="chapters"><a href="./panels/akira/ch1/panel.html">Chapter 1</a></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        </div>
-    </div>
-    
-    </div>
-</div>
-</main>
+    </main>
 
     <footer>
-    
         <div class="footer-logo">
-            <a href=" ">
-               <!-- an info page link here too-->
-               <img src="logo/faviconlogo2.png" alt="Logo">
-               
-           </a>
-        </div> 
-        <!--link to the extra pages here-->
-        <div class="other-webpages">   
-        <div><a href="other/signuppage.html">Signup</a></div>
-           <div ><a href="other/contacts.html">Contact</a></div>
-           <div ><a href="">Terms of services</a></div>
-           </div>
-           <!--copyright-->
-    
-
+            <a href="../homepage.html">
+                <img src="../logo/faviconlogo2.png" alt="Logo">
+            </a>
+        </div>
+        <div class="other-webpages">
+            <div><a href="other/contacts.html">Contact Us</a></div>
+            <div><a href="">Terms of services</a></div>
+        </div>
+        <div class="copyright">
+            &copy; Comfanatics.com
+        </div>
     </footer>
 
-
-    
-</body>  
-
-
+</body>
 
 </html>

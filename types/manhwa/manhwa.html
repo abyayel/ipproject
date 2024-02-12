@@ -6,39 +6,125 @@
 	<title>Manhwa</title>
 	<link rel="icon" href="../../logo/faviconlogo2.png" type="png"></link>
     <link rel="stylesheet" type="text/css" href="../../css/types.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <script src="../../javascript/types"></script>
 </head>
 <body>
-	<header>
-
-        <div class="header-socialmedia" >
-            <strong>Follow us:</Strong>
-            <a href="https://www.instagram.com/comfanatics123/" target="blank">Instagram</a>
-            <a href="https://twitter.com/comfanatics123" target="blank">Twitter</a>
-        </div> 
-        <div class="sub-header">
-        <div class="header-logo">
-            <a href=" ">
-            <img src="../../logo/Logo.png" alt="Logo" >
-        </div>
-    
-        <div class="header-index">
-
-           <!-- Inside the <div class="sub-header"> -->
-<div class="header-index">
-    <div class="dropdown-container">
-        <button class="dropdown-btn">Types</button>
-        <div class="dropdown-content">
-            <ul>
-                <li><a href="../comic/comic.html" title="Comic">Comic</a></li>
-                <li><a href="../manga/manga.html" title="Manga">Manga</a></li>
-                <li><a href="../manhwa/manhwa.html" title="Manhwa">Manhwa</a></li>
-            </ul>
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content-container">
+            <div class="modal-title">
+                <h2>Welcome back</h2>
+                <button class="modal-close-button"> <span class="close" id="closeLoginModal">&times;</span></button>
+            </div>
+            <div class="modal-content" id="loginModalContent">
+                <!-- Login form content -->
+                <form id="loginForm">
+                    <label for="loginUsername">Email Address</label>
+                    <br>
+                    <input type="text" id="loginUsername" name="loginUsername" placeholder="name@email.com">
+                    <br>
+                    <label for="loginPassword">Password</label>
+                    <br>
+                    <input type="password" id="loginPassword" name="loginPassword" placeholder="Password">
+                    <br>
+                    <button type="button" id="loginButton">Sign-in</button>
+                </form>
+                <p>Don't have an account? <span id="showRegisterModal">Register</span></p>
+            </div>
         </div>
     </div>
-</div>
+
+    <!-- Registration Modal -->
+    <div class="modal" id="registrationModal">
+        <div class="modal-content-container">
+            <div class="modal-title">
+                <h2>Create an Account </h2>
+                <button class="modal-close-button"> <span class="close" id="closeRegistrationModal">&times;</span></button>
+            </div>
+            <div class="modal-content" id="registerModalContent">
+                <!-- Registration form content -->
+                <form id="registrationForm">
+                    <label for="fullName">Your Name</label>
+                    <br>
+                    <input type="text" id="fullName" name="fullName" placeholder="Name">
+                    <br>
+                    <label for="email">Email Address</label>
+                    <br>
+                    <input type="email" id="email" name="email" placeholder="name@email.com">
+                    <br>
+                    <label for="newPassword">Password</label>
+                    <br>
+                    <input type="password" id="newPassword" name="newPassword" placeholder="Password">
+                    <br>
+                    <label for="confirmPassword">Confirm Password</label>
+                    <br>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+                    <br>
+                    <button type="button" id="registerButton">Sign-up</button>
+                </form>
+                <p>Already have an account? <span id="showLoginModal">Sign In</span></p>
+            </div>
+        </div>
+    </div>
+	<header>
+        <div id="first-header">
+            <div id="header-random-read">
+                <i class="fa fa-glasses"></i>
+                Read Random
+            </div>
+            <div id="socila-media">
+                <strong>Follow us:</Strong>
+                <a href="https://www.instagram.com/comfanatics123/" target="blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://twitter.com/comfanatics123" target="blank"> <i class="fab fa-twitter"></i> Twitter</a>
+            </div>
+            <div id="dark-mode-container">
+                <div class="dark-mode">
+                    <div id="dark-mode-icon-container">
+                        <i id="darkModeIcon" class="fas fa-moon mr-2"></i>
+                    </div>
+                    <div id="dark-mode-text-container">
+                        <span id="darkModeText"> Dark Mode</span>
+                    </div>
+                </div>
+            </div>
 
         </div>
-    </header> 
+
+        <div class="sub-header">
+            <div class="header-logo">
+                <a href="../../homepage.html">
+                    <img src="../../logo/Logo.png" alt="Logo">
+                </a>
+            </div>
+
+            <div class="header-index">
+                <div class="dropdown-container">
+                    <button class="dropdown-btn">Types</button>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a href="../comic/comic.html" title="Comic">Comic</a></li>
+                            <li><a href="../manga/manga.html" title="Manga">Manga</a></li>
+                            <li><a href="manhwa.html" title="Manhwa">Manhwa</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="comic-search-bar">
+                <i id="search-icon" class="fas fa-search"></i>
+                <div class="search-container"><input class="comic-search" type="search" placeholder=" Search comic....."><i id="search-icon2" class="fas fa-search"></i></div>
+            </div>
+            <div id="subscriber-button">
+                <i class="fas fa-user-circle mr-2"></i>
+                <span id="subscriber-text">
+                    Subscriber
+                </span>
+            </div>
+            <div class="search-container2"><input class="comic-search" type="search" placeholder="Search comic....."><i id="search-icon2" class="fas fa-search"></i></div>
+        </div>
+    </header>
 <main>
 <nav>
 	<a href="../../homepage.html">Home</a>
@@ -179,25 +265,19 @@
 </main>
 
 <footer>
-    
-	<div class="footer-logo">
-		<a href=" ">
-		   <!-- an info page link here too-->
-		   <img src="../../logo/faviconlogo2.png" alt="Logo">
-		   
-	   </a>
-	</div> 
-	<!--link to the extra pages here-->
-	<div class="other-webpages">   
-	<div><a href="other/signuppage.html">Signup</a></div>
-	   <div ><a href="other/contacts.html">Contact</a></div>
-	   <div ><a href="">Terms of services</a></div>
-	   </div>
-	   <!--copyright-->
-
-
+    <div class="footer-logo">
+        <a href="../../homepage.html">
+            <img src="../../../logo/faviconlogo2.png" alt="Logo">
+        </a>
+    </div>
+    <div class="other-webpages">
+        <div><a href="../../other/contacts.html">Contact Us</a></div>
+        <div><a href="../../other/terms-of-service">Terms of services</a></div>
+    </div>
+    <div class="copyright">
+        &copy; Comfanatics.com
+    </div>
 </footer>
-
 
 </body>
 </html>
