@@ -1,4 +1,4 @@
-Title: Comic webpage
+Title: Comic webpage and Memory flip game
 Group: 2
 Group Members:
 ------------------------------------
