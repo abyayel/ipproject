@@ -50,10 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function showSlide(index) {
       slides.forEach((slide, i) => {
           if (i === index) {
-           
               slide.style.display = 'block';
           } else {
-            
               slide.style.display = 'none';
           }
       });
@@ -70,6 +68,164 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   startSlideshow();
+
+
+
+   var readMoreLink = document.getElementById("readMoreLink");
+    var modal = document.getElementById("myModal");
+    var modalContent = document.getElementById("modalContent");
+
+    if (readMoreLink) {
+        readMoreLink.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            var fullDescriptionElement = document.getElementById("description");
+
+            if (fullDescriptionElement) {
+                modalContent.innerHTML = fullDescriptionElement.innerHTML;
+                modal.style.display = "flex";
+                document.body.classList.add('modal-open');
+            }
+        });
+    }
+
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+            document.body.classList.remove('modal-open');
+        }
+    });
+
+    var subscribeOrRegister = '';
+    var subscriberLink = document.getElementById("subscriber-button");
+    var modal = document.getElementById("myModal");
+    var modalContent = document.getElementById("modalContent");
+    var loginModal = document.getElementById("loginModal");
+    var registrationModal = document.getElementById("registrationModal");
+
+    if (subscriberLink) {
+        subscriberLink.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            if (subscribeOrRegister === 'register') {
+                registrationModal.style.display = "flex";
+            } else {
+                loginModal.style.display = "flex";
+            }
+
+            document.body.classList.add('modal-open');
+        });
+    }
+
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+            document.body.classList.remove('modal-open');
+        }
+        if (event.target === loginModal) {
+            loginModal.style.display = "none";
+            document.body.classList.remove('modal-open');
+            subscribeOrRegister = '';
+        }
+        if (event.target === registrationModal) {
+            registrationModal.style.display = "none";
+            document.body.classList.remove('modal-open');
+            subscribeOrRegister = 'register';
+        }
+    });
+
+    var showRegisterModal = document.getElementById("showRegisterModal");
+
+    if (showRegisterModal) {
+        showRegisterModal.addEventListener("click", function () {
+            subscribeOrRegister = 'register';
+            loginModal.style.display = "none";
+            registrationModal.style.display = "flex";
+        });
+    }
+
+    var showLoginModal = document.getElementById("showLoginModal");
+
+    if (showLoginModal) {
+        showLoginModal.addEventListener("click", function () {
+            subscribeOrRegister = '';
+            registrationModal.style.display = "none";
+            loginModal.style.display = "flex";
+        });
+    }
+
+    var closeModalButtons = document.querySelectorAll(".modal-close-button");
+
+    closeModalButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            closeModal();
+        });
+    });
+
+    var closeLoginModalButton = document.getElementById("closeLoginModal");
+
+    if (closeLoginModalButton) {
+        closeLoginModalButton.addEventListener("click", function () {
+            closeLoginModal();
+        });
+    }
+
+    var closeRegistrationModalButton = document.getElementById("closeRegistrationModal");
+
+    if (closeRegistrationModalButton) {
+        closeRegistrationModalButton.addEventListener("click", function () {
+            closeRegistrationModal();
+        });
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+        document.body.classList.remove('modal-open');
+    }
+
+    function closeLoginModal() {
+        var loginModal = document.getElementById("loginModal");
+        loginModal.style.display = "none";
+        document.body.classList.remove('modal-open');
+    }
+
+    function closeRegistrationModal() {
+        var registrationModal = document.getElementById("registrationModal");
+        registrationModal.style.display = "none";
+        document.body.classList.remove('modal-open');
+    }
+
+    var searchBarVisible = true;
+    var searchBar = document.getElementsByClassName("search-container2");
+    var searchIcon = document.getElementById("search-icon");
+
+    if (searchIcon) {
+        searchIcon.addEventListener("click", function () {
+            if (searchBar[0].style.display === "flex") {
+                searchBar[0].style.display = "none";
+            } else {
+                searchBar[0].style.display = "flex";
+                searchBarVisible = true;
+            }
+        });
+    }
+
+    function updateSearchToggleState() {
+        var isSmallScreen = window.innerWidth < 1300;
+
+        if (!isSmallScreen) {
+            if (searchBarVisible) {
+                searchBar[0].style.display = "none";
+                searchBarVisible = false;
+            }
+        }
+    }
+
+    updateSearchToggleState();
+
+    window.addEventListener("resize", updateSearchToggleState);
+
 
 
 });

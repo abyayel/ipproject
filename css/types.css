@@ -13,7 +13,6 @@ button{
 }
 
 #myModal {
-  
   display: none;
   position: fixed;
   top: 0;
@@ -31,8 +30,8 @@ button{
   position: relative;
   top: 20px;
   border-radius: 20px;
-  background-color: white;
-  overflow: scroll;
+  background-color: darkslategrey;
+  overflow: none;
 }
 
 .modal-title{
@@ -44,6 +43,8 @@ button{
 .modal-title h2{
   text-align: center;
  }
+
+ 
 
 .modal-content {
   padding: 20px;
@@ -74,6 +75,7 @@ button{
    font-size: 1.5rem;
    font-weight: 700;
    cursor: pointer;
+   background-color: lightgrey;
 }
 
 body.modal-open {
@@ -94,6 +96,32 @@ body.modal-open {
   z-index: 1000;
 }
 
+#loginUsername{
+  height: 30px;
+  border-style: none;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+#loginPassword{
+  height: 30px;
+  border-style: none;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+#loginButton{
+  position: relative;
+  left: 70px;
+  height: 40px;
+  margin: 10px 0;
+}
+
+#showRegisterModal{
+  cursor: pointer;
+  color: oldlace;
+}
+
 #registrationModal{
   display: none;
   position: fixed;
@@ -106,6 +134,46 @@ body.modal-open {
   align-items: center;
   overflow: scroll;
   z-index: 1000;
+}
+
+#fullName{
+  height: 30px;
+  border-style: none;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+#email{
+  height: 30px;
+  border-style: none;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+#newPassword{
+  height: 30px;
+  border-style: none;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+#confirmPassword{
+  height: 30px;
+  border-style: none;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+#registerButton{
+  position: relative;
+  left: 70px;
+  height: 40px;
+  margin: 10px 0;
+}
+
+#showLoginModal{
+  cursor: pointer;
+  color: oldlace;
 }
 
 header{
@@ -397,11 +465,7 @@ nav a
       @media only screen and (max-width: 1300px)
       {
          
-       
-      
-      
-      
-      
+    
           #search-icon{
           display: block;
         }
@@ -422,23 +486,32 @@ nav a
           justify-content: space-between;
         }
         .search-container2{
-          /* display: flex; */
+    
+          display: flex;
           justify-content: center;
           top: 145px;
-        
           height: 50px;
           position:absolute;
-          /* grid-area: item6; */
           width: 100%;
-          background-color: blue;
+          background-color:lightgrey;
+          overflow: hidden;
+        
         }
+      
         .comic-search{
           height: 40px;
           width: 90%;
-          /* border-radius: 10px; */
           border-style: none;
           padding: var(--small-padding);
+          border-radius: 10px 10px 10px 10px;
+          
         }
+      
+        #search-icon2{
+          display: none;
+         background-color: white;
+         position: relative;
+         top: 0px;
         
       }
 @media only screen and (max-width: 730px){      
