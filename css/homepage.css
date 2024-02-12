@@ -402,7 +402,7 @@ background-color: yellow;
   padding-right: 175px;
   padding-left: 100px;
   height: 100%;
-  overflow-y: hidden;
+  overflow: hidden;
   transition: transform 2s ease-in-out;
 }
   
