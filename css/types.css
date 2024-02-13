@@ -1,16 +1,25 @@
 :root{
   --big-padding: 20px;
   --small-padding: 10px;
+  --speical-black:rgb(15, 15, 15);
 }
 
-body{ position: relative;
-margin: 0px 0px;
-a{text-decoration: none;}
+body{ 
+  position: relative;
+margin: 0 0 ;
+color: white;
+font-weight: 600;
+overflow-x: hidden;
 }
 
-button{
-  cursor: pointer;
-}
+a{text-decoration: none;
+  color: white;
+  font-weight: 800;}
+  
+  button{
+    font-weight: 900;
+    cursor: pointer;
+  }
 
 #myModal {
   display: none;
@@ -229,13 +238,51 @@ header{
   margin-right: var(--small-padding);
 }
 
-.dark-body .chapter-content{
-  background-color: #1a1a1a;
+.dark-mode{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
-.dark-body #first-header{
-background-color: yellow;
+#dark-mode-icon-container{
+  margin-right: var(--small-padding);
 }
+
+.dark-body {
+  background-color:var(--speical-black) ;
+}
+
+.dark-body header{
+  background-color: var(--speical-black);
+}
+.dark-body .search-container2{
+  background-color: var(--speical-black);
+}
+.dark-body .sub-header{
+  color: grey;
+  a{
+    color: grey;
+  }
+  button{
+    color: grey;
+  }
+}
+
+.dark-body .rec-comic-card :hover .hover-card{
+  opacity: 1; 
+}
+.dark-body .comic-card{
+  background-color: rgb(51, 51, 51);
+}
+.dark-body .comic-name{
+  a{
+    color: gray;
+  }
+}
+.dark-body footer{
+  background-color: var(--speical-black);
+}
+
 
 .sub-header{
   display: flex;
@@ -248,10 +295,11 @@ background-color: yellow;
   padding: 0px var(--big-padding) ;
   }
 
-.header-logo img {
-  height: 100px;
-  width: 100px;
-}
+  .header-logo img {
+    height: 70px;
+    width: 300px;
+  }
+
 
 .dropdown-container {
   position: relative;
@@ -261,11 +309,10 @@ background-color: yellow;
 
 .dropdown-btn {
   background-color: inherit;
-  color: black;
+  color: white;
   font-size: 16px;
   border: none;
   cursor: pointer;
-  
 }
 
 .dropdown-content {
@@ -289,11 +336,9 @@ background-color: yellow;
   margin: 20px;
   display: block;
   transition:background-color 0.3s ease;
+  font-weight: 500;
 }
 
-.dropdown-container :hover .dropdown-btn{
- color: yellow;
-}
 
 .dropdown-content a:hover {
   background-color: lightgrey; 
@@ -342,6 +387,12 @@ background-color: yellow;
 .search-container2{
   display: none ;
 }
+
+.search-container2 input:focus {
+  border: none;
+  outline: none; 
+}
+
 
 main{
   padding: var(--small-padding) var(--big-padding);
@@ -412,12 +463,21 @@ nav a
       .comic-name{
         padding: var(--big-padding) 0px;
         font-size: 1.5em;
+        a{
+          color: black;
+        }
+        
       }
-      
+      .comic-name a:hover {
+        color: purple;
+      }
       .chapters{
         padding-bottom: 5px;
         border-bottom: 1px dashed lightgray;
         margin: 20px 0px;
+        a{
+          color: purple;
+        }
       }
       
       footer{
@@ -462,10 +522,13 @@ nav a
 
       @media only screen and (max-width: 1300px)
       {
-         nav{
+         
+        nav{
           margin-top: 50px;
          }
-    
+         #subscriber-text{
+          display: none;
+        }
           #search-icon{
           display: block;
         }
@@ -489,7 +552,7 @@ nav a
     
           display: flex;
           justify-content: center;
-          top: 145px;
+          top: 100px;
           height: 50px;
           position:absolute;
           width: 100%;
@@ -497,6 +560,7 @@ nav a
           overflow: hidden;
         
         }
+      
       
         .comic-search{
           height: 40px;
