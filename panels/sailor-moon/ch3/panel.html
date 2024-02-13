@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sailor Moon</title>
+    <title>Chapter 3</title>
     <link rel="icon" href="../../../logo/faviconlogo2.png" type="png"></link>
+    <link rel="stylesheet" href="../../../css/panel.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <script src="../../../javascript/panel.js"></script>
 </head>
 <body>
 
@@ -16,55 +19,80 @@
         </div> 
         
         <div class="info-page">
-        <a href="../../../info/sailor-moon.html">Sailor Moon</a> 
+            <a href="../../../info/sailor-moon.html">Sailor Moon</a> 
         </div>   
         
-        <div class="top-nav"> 
-            <div class="chapter-nav-list">
-                <form>
-                    <select name="chapters" id="chapters" onchange="this.value">
-                    <option value="../ch1/panel.html">Chapter 1</option>
-                    <option value="../ch2/panel.html">Chapter 2</option>
-                    <option value="../ch3/panel.html">Chapter 3</option>
-                    </select>
-                    <noscript><input type="submit" value="Go"></noscript>
-                </form>
+       
+            <div class="dropdown-container">
+                <button class="dropdown-btn"></button>
+                
+                <div id="dropdown-content">
+                    <div id="list-search"><i id="search-icon" class="fas fa-search"></i><input type="search" id="chapterSearch" placeholder="Search Chapters"></div>
+                    <ul id="chapterList">
+                        <li><a href="../ch1/panel.html" title="Chapter 1"><div class="chapter-container">Chapter 1: Usagi</div></a></li>
+                        <li><a href="../ch2/panel.html" title="Chapter 2"><div class="chapter-container">Chapter 2: Ami</div></a></li>
+                        <li><a href="../ch3/panel.html" title="Chapter 3"><div class="chapter-container">Chapter 3: Rei</div></a></li>
+                    </ul>
+                </div>
             </div>
-            
-            <div class="bottom-previous-button">
-                <a href="../ch2/panel.html"><button>previous</button></a>
-                </div>            
-
+       
+        
+        <div class="top-nav">
+            <div class="top-previous-button">
+                <a class="previousButton" href=""><button >previous</button></a>
+            </div>
             <div class="top-next-button">
-                <a href="../ch4/panel.html"><button>next</button></a>
+                <a class="nextButton" href=""><button >next</button></a>
             </div>
         </div>
-</div>
-
-<div class="container" align="center">
-    <div class="panel" > 
-        <img width="1000px" src="ch2-1.jpg" alt="0">
-    </div>
-    <div class="panel"> 
-        <img width="1000px" src="ch2-1.jpg" alt="0">
-    </div>
-    <div class="panel"> 
-        <img width="1000px" src="ch2-1.jpg" alt="0">
-    </div>
-</div>
-
-<div class="bottom-nav">
-    <div class="bottom-previous-button">
-        <a href="../ch2/panel.html"><button>previous</button></a>
     </div>
 
-    <div class="bottom-next-button">
-        <a href="../ch4/panel.html"><button>next</button></a>
+    <div class="container">
+        <div class="panel" > 
+            <img src="img-1.jpg" alt="comic-page-image" loading="lazy">
+        </div>
+        <div class="panel"> 
+            <img src="img-2.jpg"  alt="comic-page-image" loading="lazy">
+        </div>
+        <div class="panel"> 
+            <img src="img-3.jpg" alt="comic-page-image" loading="lazy">
+        </div>
+        <div class="panel"> 
+            <img src="img-4.jpg" alt="comic-page-image" loading="lazy">
+        </div>
+        <div class="panel"> 
+            <img src="img-5.jpg" alt="comic-page-image" loading="lazy">
+        </div>
+        <div class="panel"> 
+            <img src="img-6.jpg" alt="comic-page-image" loading="lazy">
+        </div>
+        <div class="panel"> 
+            <img src="img-7.jpg" alt="comic-page-image" loading="lazy">
+        </div>
+        <div class="panel"> 
+            <img src="img-8.jpg" alt="comic-page-image" loading="lazy">
+        </div>
+        <div class="panel"> 
+            <img src="img-9.jpg" alt="comic-page-image" loading="lazy">
+        </div>
+        <div class="panel"> 
+            <img src="img-10.jpg" alt="comic-page-image" loading="lazy">
+        </div>
     </div>
-    
-</div>
+
+    <div class="container2">
+        <div class="bottom-nav">
+            <div class="bottom-previous-button">
+                <a class="previousButton" href=""><button>previous</button></a>
+            </div> 
+            <div class="bottom-next-button">
+                <a class="nextButton" href=""><button>next</button></a>
+            </div>
+               
+        </div>
+    </div>
 
 </div>
+
 </body>
-
 </html>

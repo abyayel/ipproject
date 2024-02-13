@@ -265,7 +265,7 @@ background-color: yellow;
   font-size: 16px;
   border: none;
   cursor: pointer;
-  pointer-events: none;
+  
 }
 
 .dropdown-content {
@@ -302,8 +302,6 @@ background-color: yellow;
 .dropdown-container:hover .dropdown-content {
   display: block;}
 
-#comic-search-bar{
-}
 
 #search-icon{
   display: none;
@@ -464,7 +462,9 @@ nav a
 
       @media only screen and (max-width: 1300px)
       {
-         
+         nav{
+          margin-top: 50px;
+         }
     
           #search-icon{
           display: block;
@@ -514,6 +514,7 @@ nav a
          top: 0px;
         
       }
+    }
 @media only screen and (max-width: 730px){      
   .footer-logo{
     padding-top: 10px;
