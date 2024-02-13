@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Breaker</title>
+    <link rel="icon" href="../logo/faviconlogo2.png" type="png">
+    <link rel="stylesheet" href="../css/info.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <script src="../javascript/info.js"></script>
+
+</head>
+<body>
+
+    <div class="modal" id="myModal">
+        <div class="modal-content-container">
+        
+        <div class="modal-title"> 
+           
+            <h2>The Breaker</h2>
+            <button class="modal-close-button"> <span class="close" id="closeModal">&times;</span></button>
+           
+        </div>
+             
+        <div class="modal-content" id="modalContent">
+            <span class="close" id="closeModal"></span>
+            <div id="modalContent">
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+<div class="modal" id="loginModal">
+    <div class="modal-content-container">
+        <div class="modal-title"> 
+            <h2>Welcome back</h2>
+            <button class="modal-close-button"> <span class="close" id="closeLoginModal">&times;</span></button>
+        </div>
+        <div class="modal-content" id="loginModalContent">
+            <!-- Login form content -->
+            <form id="loginForm">
+                <label for="loginUsername">Email Address</label>
+                <br>
+                <input type="text" id="loginUsername" name="loginUsername"
+                placeholder="name@email.com">
+                <br>
+                <label for="loginPassword">Password</label>
+                <br>
+                <input type="password" id="loginPassword" name="loginPassword"
+                placeholder="Password">
+                <br>
+                <button type="button" id="loginButton">Sign-in</button>
+            </form>
+            <p>Don't have an account? <span id="showRegisterModal">Register</span></p>
+        </div>
+    </div>
+</div>
+
+<!-- Registration Modal -->
+<div class="modal" id="registrationModal">
+    <div class="modal-content-container">
+        <div class="modal-title"> 
+            <h2>Create an Account </h2>
+            <button class="modal-close-button"> <span class="close" id="closeRegistrationModal">&times;</span></button>
+        </div>
+        <div class="modal-content" id="registerModalContent">
+            <!-- Registration form content -->
+            <form id="registrationForm">
+                <label for="fullName">Your Name</label>
+                <br>
+                <input type="text" id="fullName" name="fullName"
+                placeholder="Name">
+                <br>
+                <label for="email">Email Address</label>
+                <br>
+                <input type="email" id="email" name="email"
+                placeholder="name@email.com">
+                <br>
+                <label for="newPassword">Password</label>
+                <br>
+                <input type="password" id="newPassword" name="newPassword"
+                placeholder="Password">
+                <br>
+                <label for="confirmPassword">Confirm Password</label>
+                <br>
+                <input type="password" id="confirmPassword" name="confirmPassword"
+                placeholder="Confirm Password">
+                <br>
+                <button type="button" id="registerButton">Sign-up</button>
+            </form>
+            <p>Already have an account? <span id="showLoginModal">Sign In</span></p>
+        </div>
+    </div>
+</div>
+
+    
+    
+    <header>
+            <div id="first-header" >
+            <div id="header-random-read">
+            <i class="fa fa-glasses"></i>     
+                Read Random
+            </div>
+            <div id="socila-media">
+            <strong>Follow us:</Strong>
+            <a href="https://www.instagram.com/comfanatics123/" target="blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://twitter.com/comfanatics123" target="blank"> <i class="fab fa-twitter"></i> Twitter</a>
+             </div>
+             <div id="dark-mode-container">
+             <div class="dark-mode">
+                <div id="dark-mode-icon-container">
+                <i id="darkModeIcon" class="fas fa-moon mr-2"></i>
+                </div>
+                <div id="dark-mode-text-container">
+                <span id="darkModeText"> Dark Mode</span>
+                </div>
+            </div>
+            </div>
+
+        </div> 
+
+        <div class="sub-header">
+            <div class="header-logo">
+                <a href="../homepage.html">
+                <img src="../../logo/Logo.png" alt="Logo" >
+            </div>
+        
+          
+    
+               
+    <div class="header-index">
+        <div class="dropdown-container">
+            <button class="dropdown-btn">Types</button>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="../types/comic/comic.html" title="Comic">Comic</a></li>
+                    <li><a href="../types/manga/manga.html" title="Manga">Manga</a></li>
+                    <li><a href="../types/manhwa/manhwa.html" title="Manhwa">Manhwa</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="comic-search-bar">
+        <i id="search-icon" class="fas fa-search"></i><div class="search-container"><input class="comic-search" type="search" placeholder=" Search comic....." ><i id="search-icon2" class="fas fa-search"></i></div></div>
+    <div id="subscriber-button">
+    <i  class="fas fa-user-circle mr-2"></i>
+    <span id="subscriber-text">
+    Subscriber
+    </span> 
+    
+    </div>
+    <div class="search-container2"><input class="comic-search" type="search" placeholder="Search comic....." ><i id="search-icon2" class="fas fa-search"></i></div>
+            </div>
+
+        
+    </header>     
+   
+    <div id="info-wrapper">
+        <!-- <div class="comic-content"> -->
+            <div class="comic-img">
+                    <img src="img/the-breaker.jpg" alt="the-breaker-poster">
+            </div>
+            <div class="comic-detail">
+                <h2 class="comic-name">The Breaker</h2>
+                <div class="read-save-button">
+                <div class="read-container"><a href="../panels/the-breaker/ch1/panel.html"><button><i class="fas fa-eye mr-2"></i> Read Now</button></a></div>
+                <div class="bookmark-container">
+                    <a href=""><button><i class="far fa-bookmark "></i>
+            </div></button></a></div>
+               
+                <div class="sort-desc">
+                    <div id="description">
+                    <p>
+                        Chunwoo Han is a martial artist who earned the title of Nine Arts Dragon from the Murim, a secret martial arts society that exists in harmony with modern society. The Murim's government is the Martial Arts Alliance who has garnered Chunwoo's hatred by killing his martial arts teacher. In the present, Chunwoo Han transfers to a fictional school in Seoul for a mission given to him by the Black Forest Defense Group, an anti-government group who opposes the Martial Arts Alliance.  </p>
+                    </p>
+                    </div>
+                    <a href="#" id="readMoreLink">Read More</a>
+                </div>   
+                
+            </div>
+            <div id="comic-vid-detail">
+            <div id="comic-extra-details">
+                <div><span>Type:</span><a href="../types/manga/manga.html"> Manga</a></div>
+                <div><span>Status:</span> <span>Publishing</span></div>
+                <div><span>Authors:</span> <span> Jeon Geuk-jin</span></div>
+                <div><span>Published:</span> <span>aug 2007</span></div> 
+                </div>
+                <div id="trailer">
+                    <video src="trailer/the-breaker.mp4"  controls autoplay loop muted ></video>
+                    </div>
+            </div>
+            <div id="details-toggle-container"> 
+            <span id="details-toggle">Hide Details</span>
+            </div>
+        </div>
+    </div>
+        
+    
+        <div id="main-content-wrapper">
+       <div>
+        
+            <div class="chapter-content">
+                
+            <div id="chapter-list-header">
+                <div id="chapter">Chapter List</div>
+                <div id="chapter-search-bar"><div class="chapter-search-container"><i class="fas fa-search"></i><input id="chapter-search" type="search" placeholder=" Number of Chapter" ></div> </div>
+            </div>
+            <div class="chapter-list">
+                
+                <a href="../panels/the-breaker/ch1/panel.html">   <div class="chapters">
+                      Chapter 1:  New Wave
+                        <button class="read-button">
+                            <i class="fa fa-glasses"></i>  Read 
+                    </button>
+                    </div></a>
+                
+                
+                    <a href="../panels/the-breaker/ch2/panel.html"> <div class="chapters">Chapter 2: Hard<button class="read-button">
+                        <i class="fa fa-glasses"></i>  Read </div></a>
+                
+                
+                        <a href="../panels/the-breaker/ch3/panel.html"><div class="chapters">Chapter 3: The Breaking Point<button class="read-button">
+                        <i class="fa fa-glasses"></i>  Read </div></a>
+                
+            </div>
+        </div>
+        </div>
+        <div class="recommended-list">
+            <div class="recommended-heading"><h1>You may also like</h1></div>
+            <div class="recommended-card">
+                <div class="recommended-comic-poster"><img width="150" height="150" src="../info/img/sailor-moon.jpg" alt="sailor-moon-poster"></div>
+                <div class="recommended-comic-desc">
+                    <h3><a href="../info/sailor-moon.html">Sailor Moon</a></h3>
+                    <p>Drama, Magic, Romance, Shoujo</p>
+                </div>
+            </div>
+            <div class="recommended-card">
+                <div class="recommended-comic-poster"><img width="150" height="150" src="../info/img/monster.jpg" alt="monster-poster"></div>
+                <div class="recommended-comic-desc">
+                    <h3><a href="../info/monster.html">Monster</a></h3>
+                    <p>Action, Comedy, Drama, Mystery, Psychological</p>
+                </div>
+            </div>
+            <div class="recommended-card">
+                <div class="recommended-comic-poster"><img width="150" height="150" src="../info/img/dragon-ball.jpg" alt="dragon-ball"></div>
+                <div class="recommended-comic-desc">
+                    <h3><a href="../info/dragon-ball.html">Dragon Ball</a></h3>
+                    <p>Action, Adventure, Comedy, Martial Arts, Shounen, Sci-Fi</p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+       
+    
+    
+    
+    <footer>
+    
+        <div class="footer-logo">
+            <a href="../homepage.html">
+               <!-- an info page link here too-->
+               <img src="../logo/faviconlogo2.png" alt="Logo">
+               
+           </a>
+        </div> 
+        <!--link to the extra pages here-->
+        <div class="other-webpages">   
+        
+           <div ><a href="other/contacts.html">Contact Us</a></div>
+           <div ><a href="">Terms of services</a></div>
+           </div>
+           <div class="copyright">
+            &copy;  Comfanatics.com 
+        </div>
+    </footer>
+
+</body>
+</html>
