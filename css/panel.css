@@ -1,7 +1,8 @@
 :root{
-    --big-padding: 20px;
-    --small-padding: 10px;
-  }
+  --big-padding: 20px;
+  --small-padding: 10px;
+  --speical-black:rgb(15, 15, 15);
+}
 
   
   button{
@@ -17,7 +18,7 @@
 
   body{ position: relative;
   margin: 0px 0px;
-  background-color: rgb(15, 15, 15);
+  background-color: var(--speical-black);
   a{text-decoration: none;}
   
 }
@@ -28,7 +29,7 @@
     padding: var(--big-padding) 50px;
     height: 50px;
     grid-template-columns:repeat(4,1fr);
-    background-color: rgb(26, 25, 25);
+    background-color: var(--speical-black);
     align-items: center;
     gap: 100px;
     

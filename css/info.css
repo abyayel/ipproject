@@ -1,16 +1,26 @@
 :root{
   --big-padding: 20px;
   --small-padding: 10px;
+  --speical-black:rgb(15, 15, 15);
 }
 
-body{ position: relative;
-margin: 0px 0px;
-a{text-decoration: none;}
+body{ 
+  position: relative;
+margin: 0 0 ;
+color: white;
+font-weight: 600;
+overflow-x: hidden;
 }
+
+a{text-decoration: none;
+color: white;
+font-weight: 800;}
 
 button{
+  font-weight: 900;
   cursor: pointer;
 }
+
 
 #myModal {
   display: none;
@@ -228,13 +238,41 @@ header{
 #dark-mode-icon-container{
   margin-right: var(--small-padding);
 }
-
+.dark-body header{
+  background-color: var(--speical-black);
+  color: grey;
+  a{
+    color: grey;
+  }
+  button{
+    color: grey;
+  }
+}
+.dark-body .search-container2{
+  background-color: var(--speical-black);
+}
 .dark-body .chapter-content{
   background-color: #1a1a1a;
 }
+.dark-body #info-wrapper{
+   background-color: rgb(28, 28, 28);
+}
 
-.dark-body #first-header{
-background-color: yellow;
+.dark-body {
+background-color:var(--speical-black) ;
+}
+
+.dark-body footer{
+  background-color: var(--speical-black);
+}
+.dark-body h1{
+  color: white;
+}
+.dark-body .recommended-list{
+  color: grey;
+}
+.dark-body .chapters{
+  background-color: gray;
 }
 
 .sub-header{
@@ -246,11 +284,12 @@ background-color: yellow;
 
 .header-logo {
   padding: 0px var(--big-padding) ;
+  
   }
 
 .header-logo img {
-  height: 100px;
-  width: 100px;
+  height: 70px;
+  width: 300px;
 }
 
 .dropdown-container {
@@ -265,6 +304,7 @@ background-color: yellow;
   font-size: 16px;
   border: none;
   cursor: pointer;
+  color: white;
   
 }
 
@@ -289,11 +329,9 @@ background-color: yellow;
   margin: 20px;
   display: block;
   transition:background-color 0.3s ease;
+  font-weight: 500;
 }
 
-.dropdown-container :hover .dropdown-btn{
- color: yellow;
-}
 
 .dropdown-content a:hover {
   background-color: lightgrey; 
@@ -301,9 +339,6 @@ background-color: yellow;
 
 .dropdown-container:hover .dropdown-content {
   display: block;}
-
-#comic-search-bar{
-}
 
 #search-icon{
   display: none;
@@ -335,6 +370,7 @@ background-color: yellow;
 #search-icon2{
   height: 100%;
   background-color:white;
+  color: black;
 }
 
 #subscriber-button{
@@ -346,7 +382,9 @@ background-color: yellow;
 }
 
 #info-wrapper{
+  
   display: grid;
+  gap: 25px;
   grid-template-columns: repeat(3,auto);
   background-color: rgb(127, 124, 124);
   padding: calc(var(--big-padding)*4) var(--big-padding);
@@ -373,13 +411,16 @@ background-color: yellow;
 .read-container button{
   width: 150px;
   height: 40px;
+  background-color: red;
   border-radius: 10px;
   border-style: none;
+  font-weight: 700;
 }
 
 .bookmark-container{
   margin-right: 380px;
   border-radius: 10px;
+  width: 40px;
 }
 
 .bookmark-container button{
@@ -390,21 +431,28 @@ background-color: yellow;
   background-color: white;
 }
 
+.sort-desc{
+  a{color: purple;}
+}
+
 #description{
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
 #comic-vid-detail{
   display: grid; 
-  margin-left: 50px;
+  /* margin-left: 50px; */
 }
 
 #comic-extra-details{
  margin-bottom: 50px;
+ a{color: purple;}
 }
 
 #trailer{
@@ -423,6 +471,7 @@ background-color: yellow;
 
 #details-toggle{
   display: none;
+  cursor: pointer;
 }
 
 #main-content-wrapper{
@@ -430,6 +479,7 @@ background-color: yellow;
   display: grid;
   grid-template-columns: 70% 30%;
   gap: 20px;
+  
 }
 
 .chapter-content{
@@ -490,7 +540,8 @@ background-color: yellow;
 
 .chapters:hover{
   background-color: gray;
-  border-left: solid purple;
+  border-left: solid red;
+  color: red;
 }
 
 .chapters button{
@@ -509,10 +560,13 @@ background-color: yellow;
 .recommended-list{
   display: grid;
   gap: var(--small-padding);
+  color: black;
+  a{color: purple;}
 }
 
 .recommended-heading{
   text-transform: capitalize;
+  color: red;
 }
 
 .recommended-card{
@@ -553,6 +607,7 @@ footer{
   display: flex;
   justify-content: center;
   margin-top: 50px;
+  color: gray;
 }
 
 @media only screen and (min-width: 1300px){
@@ -563,7 +618,9 @@ footer{
 
 @media only screen and (max-width: 1300px)
 {
-   
+  #subscriber-text{
+    display: none;
+  }
   #info-wrapper{
     display: grid;
     grid-template-columns: repeat(2,auto);
@@ -625,7 +682,7 @@ width: 100%;
     
     display: flex;
     justify-content: center;
-    top: 145px;
+    top: 100px;
     height: 50px;
     position:absolute;
     width: 100%;
@@ -677,13 +734,16 @@ width: 100%;
 
 @media only screen and (max-width: 885px)
 {
+  #info-wrapper{
+    gap: 30px;
+  }
  .comic-img{
   grid-column: 1;
   grid-row: 1;
   justify-content: center;
   display: grid;
-  
   margin: 0px 0px;
+
  }
 
  .comic-img img{
@@ -714,6 +774,8 @@ margin: auto auto;
 
  .comic-detail
  {
+  display: grid;
+  gap: 30px;
   grid-column: 1;
   grid-row: 2;
   height: 100%;
@@ -727,13 +789,14 @@ margin: auto auto;
 
  #trailer{display: none;}
  
- #main-content{
+ #main-content-wrapper{
   width:auto;
  }
    
 }
 
 @media only screen and (min-width:730px){
+  
   #description {
     display: -webkit-box !important;
   }
@@ -747,6 +810,16 @@ margin: auto auto;
 
 @media only screen and (max-width: 730px)
 {
+  
+ .chapter-content{
+  width: 450px;
+ }
+ .recommended-comic-desc{
+  width: 200px;
+ }
+  .header-logo img{
+    width: 210px;
+  }
   #description {
     display: none ;
   }
@@ -755,6 +828,7 @@ margin: auto auto;
   }
   #readMoreLink{
     display: none ;
+  
   } 
   #info-wrapper{
   justify-content: center;
@@ -768,13 +842,14 @@ margin: auto auto;
   justify-content: center;
   grid-row:4 ;
 }
+
 .footer-logo{
   padding-top: 10px;
   padding-bottom: var(--big-padding);
 }
 }
 
-@media only screen and (max-width: 575px){
+@media only screen and (max-width: 610px){
   #socila-media{
       display: none;
   }
