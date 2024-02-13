@@ -381,6 +381,11 @@ background-color:var(--speical-black) ;
   display: none ;
 }
 
+.search-container2 input:focus {
+  border: none;
+  outline: none; 
+}
+
 #info-wrapper{
   
   display: grid;
@@ -849,9 +854,4 @@ margin: auto auto;
 }
 }
 
-@media only screen and (max-width: 610px){
-  #socila-media{
-      display: none;
-  }
-}
 
